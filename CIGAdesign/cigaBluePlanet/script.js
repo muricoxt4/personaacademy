@@ -1,66 +1,76 @@
-// Video Sound Control
-document.addEventListener("DOMContentLoaded", function() {
-    const video = document.getElementById("heroVideo");
-    const unmuteBtn = document.getElementById("unmuteBtn");
-
-    // Forçamos o início silenciado para garantir o autoplay
-    video.muted = true;
-    
-    // Tenta dar o play explicitamente
-    video.play().then(() => {
-        unmuteBtn.style.display = "inline-block";
-    }).catch(() => {
-        unmuteBtn.style.display = "inline-block";
-    });
-
-    unmuteBtn.addEventListener("click", () => {
-        if(video.muted) {
-            video.muted = false;
-            unmuteBtn.innerHTML = "🔇 Desativar Som";
-        } else {
-            video.muted = true;
-            unmuteBtn.innerHTML = "🔊 Ativar Som";
-        }
-    });
-});
-
-// Scroll Effects
 const navHeader = document.getElementById('navHeader');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navHeader.classList.add('scrolled');
-    } else {
-        navHeader.classList.remove('scrolled');
-    }
+if (navHeader) {
+    window.addEventListener('scroll', () => {
+        navHeader.classList.toggle('scrolled', window.scrollY > 100);
+    }, { passive: true });
+}
+
+const getAnchorOffset = () => {
+    const headerHeight = navHeader ? navHeader.offsetHeight : 0;
+    return headerHeight + 16;
+};
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (event) => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (!target) {
+            return;
+        }
+
+        event.preventDefault();
+        const top = target.getBoundingClientRect().top + window.scrollY - getAnchorOffset();
+        window.scrollTo({
+            top,
+            behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
+    });
 });
 
-// Fade In Animation on Scroll
 const fadeElements = document.querySelectorAll('.fade-in');
 
-const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+if ('IntersectionObserver' in window) {
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                fadeObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     });
-}, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-});
 
-fadeElements.forEach(el => fadeObserver.observe(el));
+    fadeElements.forEach((element) => fadeObserver.observe(element));
+} else {
+    fadeElements.forEach((element) => element.classList.add('visible'));
+}
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('heroVideo');
+    const unmuteBtn = document.getElementById('unmuteBtn');
+
+    if (!video || !unmuteBtn) {
+        return;
+    }
+
+    const updateUnmuteLabel = () => {
+        unmuteBtn.textContent = video.muted ? 'Ativar som' : 'Desativar som';
+    };
+
+    video.muted = true;
+    updateUnmuteLabel();
+
+    const revealToggle = () => {
+        unmuteBtn.style.display = 'inline-flex';
+    };
+
+    video.play().then(revealToggle).catch(revealToggle);
+
+    unmuteBtn.addEventListener('click', () => {
+        video.muted = !video.muted;
+        updateUnmuteLabel();
     });
 });

@@ -41,6 +41,22 @@ body {
 }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
+button,
+input,
+textarea,
+select { font: inherit; }
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+}
+
+.collection-section,
+.about-section,
+.contact-section {
+    scroll-margin-top: 110px;
+}
 
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 4px; }
@@ -947,5 +963,18 @@ a { text-decoration: none; color: inherit; }
 
     .hero-stats { flex-wrap: wrap; gap: 1rem; }
     .hero-stat-divider { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 

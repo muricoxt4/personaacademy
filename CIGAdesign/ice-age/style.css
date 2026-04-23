@@ -33,6 +33,24 @@ body {
     overflow-x: hidden;
 }
 
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+}
+
+.section,
+.back-to-menu-section {
+    scroll-margin-top: 110px;
+}
+
 /* ========== NAVIGATION ========== */
 .nav-header {
     position: fixed;
@@ -116,6 +134,23 @@ body {
     min-height: 100vh;
     background-color: var(--color-bg);
     overflow: hidden;
+}
+
+.hero-img-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: min(65%, 980px);
+    height: 100%;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+.hero-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: var(--hero-image-position, center);
 }
 
 .hero-video-wrapper {
@@ -1165,4 +1200,30 @@ body {
 
 .back-to-menu-btn:hover svg {
     transform: translateX(-4px);
+}
+
+@media (max-width: 992px) {
+    .hero-img-wrapper,
+    .hero-video-wrapper {
+        position: relative;
+        width: 100%;
+        height: min(60vh, 560px);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
