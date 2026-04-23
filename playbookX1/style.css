@@ -1,0 +1,1079 @@
+/* ============================================================
+   CIGA Design - Playbook de Vendas
+   Arquivo de Estilos (style.css)
+   ============================================================ */
+
+/* ============================================================
+   1. VARIÁVEIS CSS (Design Tokens)
+   ============================================================ */
+:root {
+  /* 1.1 Cores principais */
+  --ink: #0D0906;           /* Fundo escuro principal */
+  --ink2: #140F0A;          /* Fundo escuro secundário */
+  --ivory: #FAF8F5;         /* Texto claro principal */
+  --ivory2: #D8D4CD;        /* Texto claro secundário */
+  --ivory3: #A09A90;        /* Texto claro terciário */
+  
+  /* 1.2 Cores de destaque (dourado) */
+  --gold: #C9A84C;          /* Dourado principal */
+  --gold-l: #E0C76B;        /* Dourado claro */
+  --gold-d: #8A7034;        /* Dourado escuro */
+  
+  /* 1.3 Espaçamentos responsivos */
+  --pad: clamp(1.2rem, 4vw, 3rem);      /* Padding geral */
+  --gap: clamp(1.5rem, 3vw, 2.5rem);    /* Gap entre elementos */
+  --gs: clamp(.6rem, 1.2vw, 1rem);      /* Gap pequeno */
+  --pl: clamp(1rem, 6vw, 4rem);         /* Padding lateral */
+  
+  /* 1.4 Tipografia responsiva */
+  --tt: clamp(1.6rem, 3.5vw, 2.8rem);   /* Título grande */
+  --tb: clamp(.95rem, 1.4vw, 1.15rem);  /* Texto base */
+  --ts: clamp(.78rem, 1vw, .92rem);     /* Texto pequeno */
+  --tx: clamp(.68rem, .85vw, .78rem);   /* Texto extra pequeno */
+}
+
+/* ============================================================
+   2. RESET E ESTILOS BASE
+   ============================================================ */
+
+/* 2.1 Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2.2 HTML e comportamento de scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2.3 Body */
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--ink);
+  color: var(--ivory);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+/* 2.4 Seleção de texto */
+::selection {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* ============================================================
+   3. ESTRUTURA DE SLIDES
+   ============================================================ */
+
+/* 3.1 Slide principal */
+.slide {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--pad);
+  padding-right: calc(var(--pad) + 30px);
+  overflow: hidden;
+}
+
+/* 3.2 Container de conteúdo */
+.sc {
+  max-width: 1400px;
+  width: 100%;
+}
+
+/* 3.3 Barra lateral dourada (accent) */
+.acc {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-d) 100%);
+}
+
+/* ============================================================
+   4. ELEMENTOS DECORATIVOS (Background)
+   ============================================================ */
+
+/* 4.1 Grid de fundo */
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(201, 168, 76, .03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 168, 76, .03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* 4.2 Círculos de blur decorativos */
+.bg-r {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* 4.3 Watermark (texto grande de fundo) */
+.wm {
+  position: absolute;
+  font-size: clamp(5rem, 14vw, 10rem);
+  font-weight: 800;
+  color: var(--gold);
+  opacity: .04;
+  letter-spacing: -.04em;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ============================================================
+   5. TIPOGRAFIA E LABELS
+   ============================================================ */
+
+/* 5.1 Label pequeno (seção) */
+.lbl {
+  font-size: var(--tx);
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* 5.2 Linha divisória */
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-d), transparent 80%);
+}
+
+/* ============================================================
+   6. LAYOUTS GRID
+   ============================================================ */
+
+/* 6.1 Grid de duas colunas */
+.two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  gap: var(--gap);
+}
+
+/* 6.2 Grid de três colunas */
+.three {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--gap);
+}
+
+/* ============================================================
+   7. CARDS E CONTAINERS
+   ============================================================ */
+
+/* 7.1 Card padrão */
+.card {
+  background: rgba(201, 168, 76, .04);
+  border: 1px solid var(--gold-d);
+  padding: clamp(.8rem, 1.5vw, 1.2rem);
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+}
+
+/* 7.2 Card título */
+.card .ct {
+  font-weight: 700;
+  color: var(--ivory);
+  font-size: var(--tb);
+}
+
+/* 7.3 Card corpo */
+.card .cb {
+  font-size: var(--ts);
+  color: var(--ivory2);
+}
+
+/* 7.4 Callout (destaque) */
+.callout {
+  background: linear-gradient(135deg, rgba(201, 168, 76, .08), rgba(201, 168, 76, .02));
+  border-left: 3px solid var(--gold);
+  padding: clamp(.8rem, 1.5vw, 1.2rem);
+}
+
+.callout p {
+  font-size: var(--ts);
+  color: var(--ivory2);
+}
+
+/* ============================================================
+   8. LISTAS
+   ============================================================ */
+
+/* 8.1 Lista com bullets dourados */
+ul.gl {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+ul.gl li {
+  position: relative;
+  padding-left: 1.4em;
+  font-size: var(--ts);
+  color: var(--ivory2);
+}
+
+ul.gl li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: .55em;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* ============================================================
+   9. SCRIPT BOXES (Caixas de script)
+   ============================================================ */
+
+/* 9.1 Container do script */
+.sb {
+  background: rgba(0, 0, 0, .25);
+  border: 1px solid rgba(201, 168, 76, .15);
+  padding: clamp(.7rem, 1.2vw, 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+}
+
+/* 9.2 Título do script */
+.sbc {
+  font-size: var(--tx);
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+/* 9.3 Texto do script */
+.sbt {
+  font-size: var(--ts);
+  color: var(--ivory2);
+  font-style: italic;
+}
+
+/* ============================================================
+   10. OBJEÇÕES (Formato simples)
+   ============================================================ */
+
+/* 10.1 Container de objeção simples */
+.op {
+  background: rgba(201, 168, 76, .03);
+  border-left: 2px solid var(--gold-d);
+  padding: .7em 1em;
+  margin-bottom: .5em;
+}
+
+/* 10.2 Pergunta da objeção */
+.opq {
+  font-weight: 600;
+  color: var(--ivory);
+  font-size: var(--ts);
+  margin-bottom: .3em;
+}
+
+/* 10.3 Resposta da objeção */
+.opa {
+  font-size: var(--ts);
+  color: var(--ivory2);
+}
+
+/* ============================================================
+   11. COLEÇÕES (Lista de produtos)
+   ============================================================ */
+
+/* 11.1 Item de coleção */
+.ci {
+  display: flex;
+  gap: 1em;
+  padding: .8em 0;
+  border-bottom: 1px solid rgba(201, 168, 76, .1);
+}
+
+.ci:last-child {
+  border-bottom: none;
+}
+
+/* 11.2 Bullet da coleção */
+.cib {
+  width: 8px;
+  height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  margin-top: .4em;
+  flex-shrink: 0;
+}
+
+/* 11.3 Nome da coleção */
+.cin {
+  font-weight: 700;
+  color: var(--ivory);
+  font-size: var(--tb);
+}
+
+/* 11.4 Descrição da coleção */
+.cih {
+  font-size: var(--ts);
+  color: var(--ivory2);
+  margin: .2em 0;
+}
+
+/* 11.5 Preço/especificações */
+.cip {
+  font-size: var(--tx);
+  color: var(--gold);
+}
+
+/* ============================================================
+   12. TÉCNICAS DE FECHAMENTO
+   ============================================================ */
+
+/* 12.1 Card de técnica */
+.tc {
+  background: rgba(201, 168, 76, .04);
+  border: 1px solid var(--gold-d);
+  padding: clamp(.7rem, 1.2vw, 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: .3em;
+}
+
+/* 12.2 Número da técnica */
+.tcn {
+  font-size: var(--tx);
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* 12.3 Título da técnica */
+.tct {
+  font-weight: 700;
+  color: var(--ivory);
+  font-size: var(--tb);
+}
+
+/* 12.4 Descrição da técnica */
+.tcb {
+  font-size: var(--ts);
+  color: var(--ivory2);
+}
+
+/* 12.5 Script da técnica */
+.tcs {
+  font-size: var(--ts);
+  color: var(--gold);
+  font-style: italic;
+  margin-top: .3em;
+}
+
+/* ============================================================
+   13. TIMELINE (Pós-venda)
+   ============================================================ */
+
+/* 13.1 Container da timeline */
+.tl {
+  display: flex;
+  flex-direction: column;
+  gap: .3em;
+}
+
+/* 13.2 Item da timeline */
+.tl-i {
+  display: flex;
+  gap: 1em;
+}
+
+/* 13.3 Coluna esquerda (data) */
+.tl-l {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  flex-shrink: 0;
+}
+
+/* 13.4 Badge de data */
+.tl-d {
+  background: var(--gold);
+  color: var(--ink);
+  font-size: var(--tx);
+  font-weight: 700;
+  padding: .3em .5em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 13.5 Linha conectora */
+.tl-ln {
+  flex: 1;
+  width: 2px;
+  background: var(--gold-d);
+  margin: .3em 0;
+}
+
+/* 13.6 Coluna direita (conteúdo) */
+.tl-r {
+  flex: 1;
+  padding-bottom: 1em;
+}
+
+/* 13.7 Título do item */
+.tl-t {
+  font-weight: 700;
+  color: var(--ivory);
+  font-size: var(--ts);
+}
+
+/* 13.8 Descrição do item */
+.tl-b {
+  font-size: var(--ts);
+  color: var(--ivory2);
+}
+
+/* ============================================================
+   14. PAGAMENTOS
+   ============================================================ */
+
+/* 14.1 Card de pagamento */
+.pay {
+  background: rgba(0, 0, 0, .3);
+  border: 1px solid rgba(201, 168, 76, .2);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+}
+
+/* 14.2 Card de pagamento destacado (PIX) */
+.pay.hi {
+  background: linear-gradient(135deg, rgba(201, 168, 76, .12), rgba(201, 168, 76, .04));
+  border-color: var(--gold);
+}
+
+/* 14.3 Ícone do pagamento */
+.pay-ic {
+  font-size: 1.5em;
+}
+
+/* 14.4 Nome do método */
+.pay-nm {
+  font-weight: 700;
+  color: var(--ivory);
+  font-size: var(--tb);
+}
+
+/* 14.5 Detalhes do método */
+.pay-dt {
+  font-size: var(--ts);
+  color: var(--ivory2);
+}
+
+/* 14.6 Dica do método */
+.pay-tip {
+  font-size: var(--tx);
+  color: var(--gold);
+  margin-top: .3em;
+}
+
+/* ============================================================
+   15. ALERTAS (Bloqueios de pagamento)
+   ============================================================ */
+
+/* 15.1 Container de alerta */
+.lp {
+  background: rgba(0, 0, 0, .2);
+  border-left: 2px solid #E07070;
+  padding: .7em 1em;
+  margin-bottom: .5em;
+}
+
+/* 15.2 Pergunta do alerta */
+.lpq {
+  font-weight: 600;
+  color: #E07070;
+  font-size: var(--ts);
+  margin-bottom: .3em;
+}
+
+/* 15.3 Resposta do alerta */
+.lpa {
+  font-size: var(--ts);
+  color: var(--ivory2);
+}
+
+/* ============================================================
+   16. TABELA DE KPIs
+   ============================================================ */
+
+/* 16.1 Tabela base */
+table.kpi {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--ts);
+}
+
+/* 16.2 Células */
+table.kpi th,
+table.kpi td {
+  padding: .6em .8em;
+  text-align: left;
+  border-bottom: 1px solid rgba(201, 168, 76, .15);
+}
+
+/* 16.3 Cabeçalho */
+table.kpi th {
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: var(--tx);
+  letter-spacing: .08em;
+}
+
+/* 16.4 Coluna de label */
+table.kpi .tdl {
+  color: var(--ivory);
+}
+
+/* 16.5 Status OK (verde) */
+table.kpi .ok {
+  color: #7ECF8E;
+}
+
+/* 16.6 Status Warning (laranja) */
+table.kpi .warn {
+  color: #E0A060;
+}
+
+/* 16.7 Coluna de ação */
+table.kpi .tda {
+  color: var(--ivory3);
+  font-size: var(--tx);
+}
+
+/* ============================================================
+   17. ÍNDICE (Overlay)
+   ============================================================ */
+
+/* 17.1 Overlay do índice */
+#idx {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 9, 6, .98);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  padding: var(--pad);
+  overflow-y: auto;
+}
+
+/* 17.2 Índice visível */
+#idx.show {
+  display: flex;
+}
+
+/* 17.3 Cabeçalho do índice */
+#idx-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--gap);
+}
+
+/* 17.4 Botão de fechar */
+#idx-close {
+  background: none;
+  border: 1px solid var(--gold-d);
+  color: var(--gold);
+  padding: .5em 1.2em;
+  cursor: pointer;
+  font-size: var(--ts);
+  transition: all .2s;
+}
+
+#idx-close:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* 17.5 Lista do índice */
+#idx-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--gs);
+}
+
+/* 17.6 Item do índice */
+.idx-i {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: .8em 1em;
+  background: rgba(201, 168, 76, .03);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all .2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.idx-i:hover,
+.idx-i:focus {
+  border-color: var(--gold-d);
+  background: rgba(201, 168, 76, .08);
+}
+
+/* 17.7 Número do item */
+.idx-num {
+  font-size: var(--tb);
+  font-weight: 700;
+  color: var(--gold);
+  width: 2em;
+}
+
+/* 17.8 Informações do item */
+.idx-info {
+  flex: 1;
+}
+
+.idx-info strong {
+  display: block;
+  color: var(--ivory);
+  font-size: var(--ts);
+}
+
+.idx-info span {
+  font-size: var(--tx);
+  color: var(--ivory3);
+}
+
+/* 17.9 Seta do item */
+.idx-arr {
+  color: var(--gold);
+}
+
+/* ============================================================
+   18. NAVEGAÇÃO FIXA
+   ============================================================ */
+
+/* 18.1 Contador de slides */
+#ctr {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  font-size: var(--tx);
+  color: var(--ivory3);
+  background: rgba(13, 9, 6, .9);
+  padding: .5em 1em;
+  border: 1px solid var(--gold-d);
+  z-index: 90;
+  pointer-events: none;
+  border-radius: 4px;
+}
+
+/* 18.2 Container dos dots */
+#ndots {
+  position: fixed;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 90;
+  background: rgba(13, 9, 6, .7);
+  padding: 10px 6px;
+  border-radius: 20px;
+}
+
+/* 18.3 Dot individual */
+.ndot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold-d);
+  cursor: pointer;
+  transition: all .2s;
+}
+
+/* 18.4 Dot ativo */
+.ndot.on {
+  background: var(--gold);
+  transform: scale(1.4);
+}
+
+/* 18.5 Dica de navegação */
+#hint {
+  position: fixed;
+  bottom: 20px;
+  left: var(--pad);
+  font-size: var(--tx);
+  color: var(--ivory3);
+  display: flex;
+  align-items: center;
+  gap: .6em;
+  z-index: 90;
+  background: rgba(13, 9, 6, .8);
+  padding: .5em .8em;
+  border-radius: 4px;
+}
+
+/* 18.6 Tecla de atalho */
+.key {
+  display: inline-block;
+  background: rgba(201, 168, 76, .1);
+  border: 1px solid var(--gold-d);
+  padding: .15em .5em;
+  font-family: monospace;
+}
+
+/* ============================================================
+   19. ANIMAÇÕES (Reveal)
+   ============================================================ */
+
+/* 19.1 Estado inicial (invisível) */
+.rv {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+/* 19.2 Estado visível */
+.rv.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 19.3 Delays de animação */
+.d1 { transition-delay: .1s; }
+.d2 { transition-delay: .2s; }
+.d3 { transition-delay: .3s; }
+.d4 { transition-delay: .4s; }
+.d5 { transition-delay: .5s; }
+
+/* ============================================================
+   20. SEÇÕES EXPANDIDAS (Técnicas e Objeções)
+   ============================================================ */
+
+/* 20.1 Caixa de técnica avançada */
+.technique-box {
+  background: linear-gradient(135deg, rgba(201, 168, 76, .06), rgba(0, 0, 0, .3));
+  border: 1px solid var(--gold-d);
+  padding: 1.2em;
+  margin-bottom: .8em;
+}
+
+/* 20.2 Título da técnica */
+.technique-title {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: var(--ts);
+  margin-bottom: .5em;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+/* 20.3 Conteúdo da técnica */
+.technique-content {
+  font-size: var(--ts);
+  color: var(--ivory2);
+}
+
+/* 20.4 Script da técnica */
+.technique-script {
+  background: rgba(0, 0, 0, .4);
+  padding: .8em;
+  margin-top: .6em;
+  border-left: 2px solid var(--gold);
+  font-style: italic;
+}
+
+/* 20.5 Objeção completa */
+.objection-full {
+  background: rgba(201, 168, 76, .04);
+  border: 1px solid var(--gold-d);
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+/* 20.6 Cabeçalho da objeção */
+.objection-header {
+  font-weight: 700;
+  color: #E07070;
+  font-size: var(--tb);
+  margin-bottom: .5em;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+/* 20.7 Contexto da objeção */
+.objection-context {
+  font-size: var(--ts);
+  color: var(--ivory3);
+  margin-bottom: .8em;
+  padding-bottom: .5em;
+  border-bottom: 1px solid rgba(201, 168, 76, .1);
+}
+
+/* 20.8 Resposta da objeção */
+.objection-response {
+  font-size: var(--ts);
+  color: var(--ivory2);
+  margin-bottom: .5em;
+}
+
+/* 20.9 Técnica da objeção */
+.objection-technique {
+  font-size: var(--tx);
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: .3em;
+}
+
+/* 20.10 Exemplo da objeção */
+.objection-example {
+  background: rgba(0, 0, 0, .3);
+  padding: .8em;
+  margin-top: .5em;
+  font-style: italic;
+  font-size: var(--ts);
+  color: var(--ivory2);
+  border-left: 2px solid var(--gold);
+}
+
+/* ============================================================
+   21. FASES DE ABORDAGEM
+   ============================================================ */
+
+/* 21.1 Container da fase */
+.approach-phase {
+  background: rgba(201, 168, 76, .05);
+  border-left: 3px solid var(--gold);
+  padding: 1em;
+  margin-bottom: .8em;
+}
+
+/* 21.2 Título da fase */
+.approach-title {
+  font-weight: 700;
+  color: var(--ivory);
+  font-size: var(--tb);
+  margin-bottom: .3em;
+}
+
+/* 21.3 Tempo da fase */
+.approach-time {
+  font-size: var(--tx);
+  color: var(--gold);
+  margin-bottom: .5em;
+}
+
+/* 21.4 Conteúdo da fase */
+.approach-content {
+  font-size: var(--ts);
+  color: var(--ivory2);
+}
+
+/* ============================================================
+   22. BADGES
+   ============================================================ */
+
+/* 22.1 Badge do site */
+.site-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  background: linear-gradient(135deg, var(--gold), var(--gold-d));
+  color: var(--ink);
+  padding: .4em .8em;
+  font-size: var(--tx);
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+/* 22.2 Badge oficial */
+.official-badge {
+  background: linear-gradient(135deg, #2E7D32, #1B5E20);
+  color: white;
+  padding: .6em 1em;
+  font-size: var(--ts);
+  font-weight: 600;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+}
+
+/* ============================================================
+   23. IMAGENS DE PRODUTO
+   Para adicionar imagens, use a classe .product-image
+   ============================================================ */
+
+.product-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--gold-d);
+  margin: 1em 0;
+}
+
+/* ============================================================
+   24. RESPONSIVIDADE
+   ============================================================ */
+
+@media (max-width: 600px) {
+  /* 24.1 Grids em coluna única */
+  .two,
+  .three {
+    grid-template-columns: 1fr;
+  }
+  
+  /* 24.2 Esconde dots no mobile */
+  #ndots {
+    display: none;
+  }
+  
+  /* 24.3 Ajusta padding do slide */
+  .slide {
+    padding-right: var(--pad);
+  }
+}
+
+/* ============================================================
+   25. CLASSES UTILITÁRIAS (Substituem estilos inline)
+   ============================================================ */
+
+/* 25.1 Backgrounds */
+.bg-ink { background: var(--ink); }
+.bg-ink2 { background: var(--ink2); }
+.bg-gradient-dark { background: linear-gradient(135deg, var(--ink) 0%, #130E04 100%); }
+.bg-official { background: linear-gradient(135deg, rgba(46, 125, 50, .15), rgba(27, 94, 32, .08)); border: 1px solid #2E7D32; }
+
+/* 25.2 Flexbox */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.justify-end { justify-content: flex-end; }
+.gap-xs { gap: var(--gs); }
+.gap-sm { gap: .8em; }
+.gap-md { gap: 1em; }
+.gap-lg { gap: 1.2em; }
+
+/* 25.3 Padding e Margin */
+.pl-main { padding-left: var(--pl); }
+.mt-xs { margin-top: var(--gs); }
+.mt-sm { margin-top: .5em; }
+.mt-md { margin-top: 1em; }
+.mt-lg { margin-top: var(--gap); }
+.mb-xs { margin-bottom: var(--gs); }
+.mb-sm { margin-bottom: .5em; }
+.mb-md { margin-bottom: .8em; }
+.mb-lg { margin-bottom: var(--gap); }
+.p-md { padding: 1em; }
+.p-lg { padding: 1.2em; }
+
+/* 25.4 Tipografia */
+.text-gold { color: var(--gold); }
+.text-gold-l { color: var(--gold-l); }
+.text-ivory { color: var(--ivory); }
+.text-ivory2 { color: var(--ivory2); }
+.text-ivory3 { color: var(--ivory3); }
+.text-green { color: #7ECF8E; }
+.text-tx { font-size: var(--tx); }
+.text-ts { font-size: var(--ts); }
+.text-tb { font-size: var(--tb); }
+.text-tt { font-size: var(--tt); }
+.text-cover { font-size: clamp(2.5rem, 7vw, 5rem); }
+.text-wm-slide { font-size: clamp(4rem, 11vw, 8rem); }
+.font-bold { font-weight: 700; }
+.font-black { font-weight: 800; }
+.uppercase { text-transform: uppercase; }
+.tracking-wide { letter-spacing: .18em; }
+.tracking-wider { letter-spacing: .25em; }
+.tracking-tight { letter-spacing: -.03em; }
+.leading-none { line-height: 1; }
+.italic { font-style: italic; }
+.max-w-420 { max-width: 420px; }
+.max-w-700 { max-width: 700px; }
+
+/* 25.5 Posicionamento */
+.relative { position: relative; }
+.z-2 { z-index: 2; }
+
+/* 25.6 Linhas decorativas */
+.line-h { height: 1px; width: 60px; background: var(--gold-d); }
+.line-flex { height: 1px; flex: 1; background: linear-gradient(90deg, var(--gold-d), transparent); }
+
+/* 25.7 Elementos específicos de slides */
+
+/* Slide 01: Capa */
+.cover-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--pad);
+  padding-bottom: clamp(2rem, 5.5vh, 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gs);
+}
+
+.cover-bg-1 {
+  width: 70vw;
+  height: 70vw;
+  top: -15vh;
+  right: -18vw;
+  background: radial-gradient(circle, rgba(201, 168, 76, .08), transparent 65%);
+}
+
+.cover-bg-2 {
+  width: 40vw;
+  height: 40vw;
+  bottom: -10vh;
+  left: -10vw;
+  background: radial-gradient(circle, rgba(201, 168, 76, .04), transparent 70%);
+}
+
+.cover-svg {
+  position: absolute;
+  right: 5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(160px, 32vw, 420px);
+  opacity: .09;
+  pointer-events: none;
+}
+
+.cover-wm {
+  right: var(--pad);
+  bottom: var(--pad);
+}
+
+/* Watermarks de slides */
+.wm-slide {
+  right: var(--pad);
+  bottom: var(--pad);
+  font-size: clamp(4rem, 11vw, 8rem);
+}
+
+/* ============================================================
+   FIM DO ARQUIVO DE ESTILOS
+   ============================================================ */

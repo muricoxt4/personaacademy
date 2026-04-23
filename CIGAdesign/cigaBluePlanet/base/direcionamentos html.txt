@@ -1,0 +1,186 @@
+1. Dinâmica do "Flip Clock" (Cronômetro / Relógio Animado)
+/* Gerencia a sobreposição de z-index durante a animação */
+@keyframes indexing {
+  0% { z-index: 2; }
+  1% { z-index: 3; }
+  100% { z-index: 4; }
+}
+
+/* Dobra a parte inferior (cai para a frente) */
+@keyframes flip-bottom {
+  0% { transform: rotateX(90deg); }
+  100% { transform: rotateX(0); }
+}
+
+/* Dobra a parte superior */
+@keyframes flip-top {
+  0% { transform: rotateX(0); }
+  100% { transform: rotateX(-90deg); }
+}
+
+/* Efeito de sombra simulando profundidade 3D */
+@keyframes show-shadow {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes hide-shadow {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+2. Animações de Aparecimento e "Sticky Header" (Cabeçalho Fixo)
+@keyframes headerOn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes headerOff {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fade-in {
+  animation: headerOn 300ms forwards ease-out;
+}
+
+.fade-out {
+  animation: headerOff 300ms forwards ease-out;
+}
+
+// parte do layout de vídeo //
+
+<div class="ciga-hero-section">
+    <div class="ciga-video-wrapper">
+        <video id="ciga-promo-video" autoplay loop playsinline>
+            <source src="seu-video-de-campanha.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+    </div>
+
+    <div class="ciga-text-content">
+        <h2>Série X Gorila</h2>
+        <p>A revolução da mecânica aparente. Onde a suspensão independente encontra a arte do tempo.</p>
+        
+        <button id="ciga-unmute-btn" class="unmute-btn" style="display: none;">
+            Ativar Som 🔊
+        </button>
+    </div>
+</div>
+
+/* Container principal (fundo escuro, estilo premium CIGA) */
+.ciga-hero-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa a tela toda */
+    background-color: #050505; /* Fundo premium escuro */
+    color: #ffffff;
+    overflow: hidden;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* O wrapper do vídeo posicionado à esquerda */
+.ciga-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%; /* O vídeo ocupa 75% da largura da tela */
+    height: 100%;
+    
+    /* A MÁGICA ACONTECE AQUI: Cria o fade/opacidade suave na lateral direita */
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+}
+
+.ciga-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo não fique esticado */
+}
+
+/* Posicionamento do texto na direita */
+.ciga-text-content {
+    position: relative;
+    z-index: 10;
+    margin-left: 55%; /* Empurra o texto para a área onde o vídeo começa a ficar transparente */
+    width: 40%;
+    padding: 2rem;
+}
+
+.ciga-text-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.ciga-text-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin-bottom: 2rem;
+}
+
+/* Estilo do botão de som para não quebrar o layout premium */
+.unmute-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.unmute-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const video = document.getElementById("ciga-promo-video");
+    const unmuteBtn = document.getElementById("ciga-unmute-btn");
+
+    // Prepara o vídeo para tocar com volume no máximo
+    video.volume = 1;
+    video.muted = false; // Tenta forçar o estado desmutado
+
+    // Inicia o play e captura a promessa (comportamento nativo do navegador)
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+        playPromise.then(() => {
+            // Sucesso! O navegador permitiu o Autoplay COM som.
+            console.log("Autoplay com som iniciado com sucesso.");
+        }).catch(error => {
+            // Falha: O navegador bloqueou o som por falta de interação prévia.
+            console.log("Autoplay com som bloqueado. Entrando em modo 'Mudo' para não perder a animação.");
+            
+            // Reverte para mudo e toca de novo (isso o navegador sempre permite)
+            video.muted = true;
+            video.play();
+            
+            // Mostra o botão para o usuário ativar a experiência sonora do presskit
+            unmuteBtn.style.display = "inline-block";
+        });
+    }
+
+    // Ação de clique no botão de som
+    unmuteBtn.addEventListener("click", () => {
+        if(video.muted) {
+            video.muted = false;
+            unmuteBtn.innerText = "Desativar Som 🔇";
+        } else {
+            video.muted = true;
+            unmuteBtn.innerText = "Ativar Som 🔊";
+        }
+    });
+});
+
+
+
+
+

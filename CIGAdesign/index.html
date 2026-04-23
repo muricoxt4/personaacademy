@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIGA design Brasil | Presskit para Criadores e Influenciadores</title>
+    <meta name="description" content="Presskit exclusivo da CIGA design Brasil para influenciadores e parceiros. Acesse especificações técnicas, diretrizes de comunicação e galeria dos 13 modelos.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =====================================================
+         NAVEGAÇÃO FIXA
+         Barra superior com logo, links de âncora para cada
+         seção da página e badge "Presskit Exclusivo".
+         Fica transparente no topo e escurece ao rolar.
+    ====================================================== -->
+    <header class="nav-header" id="navHeader">
+        <div class="nav-logo">
+            <img src="imagens/ciga-logo.png" alt="CIGA design">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#colecao">Coleção</a></li>
+                <li><a href="#sobre">Sobre a CIGA</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="nav-badge">Presskit Exclusivo</div>
+    </header>
+
+    <!-- =====================================================
+         HERO — CAPA DA PÁGINA
+         Foto do Blue Planet II como imagem de fundo com
+         overlay escuro. Apresenta o nome da marca, descrição
+         do presskit, estatísticas principais e botão para
+         descer à coleção. O troféu GPHG flutua no canto
+         direito como destaque do prêmio conquistado em 2021.
+    ====================================================== -->
+    <section class="hero-section">
+        <div class="hero-bg-img">
+            <img src="imagens/blueplanet_1.webp" alt="CIGA design Blue Planet II">
+            <div class="hero-bg-overlay"></div>
+        </div>
+
+        <div class="hero-bg">
+            <div class="hero-bg-glow hero-bg-glow--blue"></div>
+            <div class="hero-bg-glow hero-bg-glow--gold"></div>
+            <div class="hero-grid-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="hero-eyebrow-line"></span>
+                <span>Presskit para Influenciadores &amp; Parceiros</span>
+                <span class="hero-eyebrow-line"></span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="hero-title-brand">CIGA</span>
+                <span class="hero-title-sub">design</span>
+                <span class="hero-title-br">Brasil</span>
+            </h1>
+
+            <p class="hero-description">
+                Selecione um relógio abaixo para acessar o material exclusivo de divulgação —
+                especificações técnicas, diretrizes de comunicação, galeria de imagens
+                e direcionamentos estratégicos para seus conteúdos.
+            </p>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number">13</div>
+                    <div class="hero-stat-label">Modelos</div>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">1</div>
+                    <div class="hero-stat-label">Prêmio GPHG</div>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">23.5K+</div>
+                    <div class="hero-stat-label">Usuários Globais</div>
+                </div>
+            </div>
+
+            <a href="#colecao" class="hero-cta">
+                <span>Explorar Coleção</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            </a>
+        </div>
+
+        <div class="hero-award-float">
+            <img src="imagens/premiação--trofeu.png" alt="Troféu GPHG" class="hero-award-img">
+            <div class="hero-award-label">
+                <span class="hero-award-name">Challenge Watch Prize</span>
+                <span class="hero-award-event">GPHG · Genève 2021</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLEÇÃO — ÍNDICE DE PRESSSKITS -->
+    <section class="collection-section" id="colecao">
+        <div class="collection-header">
+            <span class="section-eyebrow">Materiais de Divulgação</span>
+            <h2 class="section-title">Escolha o Relógio</h2>
+            <p class="section-subtitle">
+                Cada página contém o presskit completo do modelo — narrativa, técnica, galeria e
+                direcionamentos para criadores de conteúdo.
+            </p>
+        </div>
+
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="masculino">Masculino</button>
+            <button class="filter-btn" data-filter="feminino">Feminino</button>
+        </div>
+
+        <div class="watches-grid" id="watchesGrid">
+
+            <!-- 01 · Skeleton Edge Exploration -->
+            <article class="watch-card" data-gender="masculino">
+                <div class="watch-card-img-wrap">
+                    <img src="skeleton-edge-exploration/imagens/edgeExploration_1.jpg" alt="CIGA design Skeleton Edge Exploration" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">01</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name">Skeleton <strong>· Edge Exploration</strong></h3>
+                    <p class="watch-card-desc">O esqueleto mecânico levado ao extremo. Design de vanguarda que expõe a alma do movimento.</p>
+                    <a href="skeleton-edge-exploration/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 02 · Hunter -->
+            <article class="watch-card" data-gender="masculino">
+                <div class="watch-card-img-wrap">
+                    <img src="hunter/imagens/hunter_1.jpg" alt="CIGA design Hunter" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">02</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name"><strong>Hunter</strong></h3>
+                    <p class="watch-card-desc">Precisão e ousadia em forma de relógio. Design agressivo com acabamento de alto nível.</p>
+                    <a href="hunter/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 03 · Edge -->
+            <article class="watch-card" data-gender="masculino">
+                <div class="watch-card-img-wrap">
+                    <img src="edge/imagens/edge_1.jpg" alt="CIGA design Edge" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">03</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name"><strong>Edge</strong></h3>
+                    <p class="watch-card-desc">Na borda entre a engenharia e a arte. Geometria radical que redefine o conceito de relógio.</p>
+                    <a href="edge/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 04 · Skeleton -->
+            <article class="watch-card" data-gender="masculino">
+                <div class="watch-card-img-wrap">
+                    <img src="skeleton/imagens/skeleton_1.jpg" alt="CIGA design Skeleton" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">04</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name"><strong>Skeleton</strong></h3>
+                    <p class="watch-card-desc">Transparência total: cada engrenagem à mostra, cada detalhe do movimento exposto com maestria.</p>
+                    <a href="skeleton/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 05 · Eye of Horus -->
+            <article class="watch-card" data-gender="masculino">
+                <div class="watch-card-img-wrap">
+                    <img src="eye-of-horus/imagens/eyeOfHorus_1.jpg" alt="CIGA design Eye of Horus" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">05</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name">Eye of <strong>Horus</strong></h3>
+                    <p class="watch-card-desc">Inspirado na mitologia egípcia, o Olho de Hórus traz misticismo e precisão em um design inconfundível.</p>
+                    <a href="eye-of-horus/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 06 · Legend of Serpent -->
+            <article class="watch-card" data-gender="masculino">
+                <div class="watch-card-img-wrap">
+                    <img src="legend-of-serpent/imagens/legendOfSerpent_1.jpg" alt="CIGA design Legend of Serpent" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">06</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name">Legend of <strong>Serpent</strong></h3>
+                    <p class="watch-card-desc">A serpente como símbolo eterno de renovação. Um design que envolve o pulso como uma obra escultórica.</p>
+                    <a href="legend-of-serpent/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 07 · Blue Planet II — DESTAQUE (presskit ativo) -->
+            <article class="watch-card watch-card--featured" data-gender="masculino">
+                <div class="watch-card-award">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    GPHG 2021
+                </div>
+                <div class="watch-card-img-wrap">
+                    <img src="imagens/blueplanet_1.webp" alt="CIGA design Blue Planet II" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">07</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name">Blue Planet <strong>II</strong></h3>
+                    <p class="watch-card-desc">Vencedor do "Oscar da Relojoaria". Mostrador microentalhado com topografia real da Terra. Movimento assíncrono patenteado.</p>
+                    <a href="cigaBluePlanet/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 08 · Blue Planet II Gilded Age -->
+            <article class="watch-card watch-card--featured" data-gender="masculino">
+                <div class="watch-card-img-wrap">
+                    <img src="blue-planet-ii-gilded-age/imagens/gildedAge_1.jpg" alt="CIGA design Blue Planet II Gilded Age" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">08</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name">Blue Planet II <strong>· Gilded Age</strong></h3>
+                    <p class="watch-card-desc">A edição dourada do premiado Blue Planet II. Acabamento luxuoso que eleva o conceito de design autoral e engenharia planetária.</p>
+                    <a href="blue-planet-ii-gilded-age/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 09 · Magician -->
+            <article class="watch-card" data-gender="masculino">
+                <div class="watch-card-img-wrap">
+                    <img src="magician/imagens/magician_1.jpg" alt="CIGA design Magician" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">09</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name"><strong>Magician</strong></h3>
+                    <p class="watch-card-desc">Ilusão e precisão, o Mágico faz o tempo desaparecer com um movimento engenhoso e surpreendente.</p>
+                    <a href="magician/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 10 · Eastern Jade -->
+            <article class="watch-card" data-gender="masculino">
+                <div class="watch-card-img-wrap">
+                    <img src="eastern-jade/imagens/easternJade_1.jpg" alt="CIGA design Eastern Jade" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">10</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name">Eastern <strong>Jade</strong></h3>
+                    <p class="watch-card-desc">A filosofia oriental em forma de relógio. Jade e tradição milenares traduzidos em alta relojoaria contemporânea.</p>
+                    <a href="eastern-jade/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 11 · Machina (Feminino) -->
+            <article class="watch-card watch-card--feminino" data-gender="feminino">
+                <div class="watch-card-badge-gender">Feminino</div>
+                <div class="watch-card-img-wrap">
+                    <img src="machina/imagens/machina_1.jpg" alt="CIGA design Machina" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">11</span>
+                        <span class="watch-card-gender">Feminino</span>
+                    </div>
+                    <h3 class="watch-card-name">Mechanical Watch <strong>Machina</strong></h3>
+                    <p class="watch-card-desc">Feminilidade e mecânica em harmonia. Elegância que não abre mão da engenharia e da ousadia criativa.</p>
+                    <a href="machina/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 12 · Gorilla -->
+            <article class="watch-card" data-gender="masculino">
+                <div class="watch-card-img-wrap">
+                    <img src="gorilla/imagens/gorilla_1.jpg" alt="CIGA design Gorilla" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">12</span>
+                        <span class="watch-card-gender">Masculino</span>
+                    </div>
+                    <h3 class="watch-card-name"><strong>Gorilla</strong></h3>
+                    <p class="watch-card-desc">Força bruta com alma de engenheiro. Suspensão independente e mecânica à vista em uma peça de impacto visceral.</p>
+                    <a href="gorilla/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- 13 · Ice Age (Feminino) -->
+            <article class="watch-card watch-card--feminino" data-gender="feminino">
+                <div class="watch-card-badge-gender">Feminino</div>
+                <div class="watch-card-img-wrap">
+                    <img src="ice-age/imagens/iceAge_1.jpg" alt="CIGA design Ice Age" class="watch-card-img" loading="lazy">
+                    <div class="watch-card-img-overlay"></div>
+                </div>
+                <div class="watch-card-body">
+                    <div class="watch-card-meta">
+                        <span class="watch-card-num">13</span>
+                        <span class="watch-card-gender">Feminino</span>
+                    </div>
+                    <h3 class="watch-card-name">Mechanical Watch <strong>Ice Age</strong></h3>
+                    <p class="watch-card-desc">A era glacial cristalizada no pulso. Frescor, pureza e movimento mecânico em um design que congela o tempo.</p>
+                    <a href="ice-age/index.html" class="watch-card-btn">
+                        <span>Ver Presskit</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </article>
+
+        </div><!-- /watches-grid -->
+    </section>
+
+    <!-- =====================================================
+         SOBRE A MARCA
+         Texto institucional da CIGA design com histórico
+         do prêmio GPHG 2021 e informações sobre a
+         distribuidora exclusiva no Brasil (JG Importadora).
+         Links diretos para o site oficial e Instagram.
+         Imagem da premiação completa ao lado do texto.
+    ====================================================== -->
+    <section class="about-section" id="sobre">
+        <div class="about-inner">
+            <div class="about-text">
+                <span class="section-eyebrow">Sobre a Marca</span>
+                <h2 class="section-title">Design que Desafia<br><em>o Convencional</em></h2>
+                <p>
+                    A CIGA design é uma marca de relojoaria que combina engenharia de precisão
+                    com design autoral e inovação disruptiva. Reconhecida internacionalmente,
+                    a marca conquistou o <strong>Challenge Watch Prize no Grand Prix d'Horlogerie de Genève</strong>
+                    — o "Oscar da Relojoaria" — em 2021, superando gigantes como Patek Philippe e Piaget.
+                </p>
+                <p>
+                    No Brasil, a CIGA design é distribuída exclusivamente pela
+                    <strong>JG Importadora Ltda</strong>, com sede em Foz do Iguaçu - PR.
+                </p>
+                <div class="about-links">
+                    <a href="https://www.usecigadesign.com.br/" target="_blank" rel="noopener" class="about-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        Site Oficial Brasil
+                    </a>
+                    <a href="https://www.instagram.com/cigabrasil_oficial" target="_blank" rel="noopener" class="about-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        @cigabrasil_oficial
+                    </a>
+                </div>
+            </div>
+            <div class="about-award">
+                <img src="imagens/premiação-completo.png" alt="CIGA design Premiação GPHG" class="about-award-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         CONTATO
+         Canais de atendimento da equipe CIGA design Brasil:
+         WhatsApp, e-mail e Instagram.
+         Horário: Segunda a Sexta, 8h às 17h.
+    ====================================================== -->
+    <section class="contact-section" id="contato">
+        <div class="contact-inner">
+            <span class="section-eyebrow">Central de Atendimento</span>
+            <h2 class="section-title">Fale com Nossa Equipe</h2>
+            <p class="contact-desc">Para dúvidas sobre os materiais, parcerias ou informações adicionais sobre os relógios.</p>
+            <div class="contact-cards">
+                <a href="https://wa.me/5511941697630" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l.81-.81a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-label">WhatsApp</span>
+                        <span class="contact-card-value">(11) 94169-7630</span>
+                    </div>
+                </a>
+                <a href="mailto:contato@cigadesign.com.br" class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-label">E-mail</span>
+                        <span class="contact-card-value">contato@cigadesign.com.br</span>
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/cigabrasil_oficial" target="_blank" rel="noopener" class="contact-card">
+                    <div class="contact-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </div>
+                    <div class="contact-card-info">
+                        <span class="contact-card-label">Instagram</span>
+                        <span class="contact-card-value">@cigabrasil_oficial</span>
+                    </div>
+                </a>
+            </div>
+            <p class="contact-hours">Atendimento: Segunda a Sexta, das 8h às 17h</p>
+        </div>
+    </section>
+
+    <!-- =====================================================
+         RODAPÉ
+         Logo, descrição do material e informações legais.
+         CNPJ da JG Importadora Ltda.
+         Badge "Material Interno — Não Distribuir".
+    ====================================================== -->
+    <footer class="footer">
+        <div class="footer-top">
+            <img src="imagens/ciga-logo.png" alt="CIGA design" class="footer-logo">
+            <div class="footer-divider"></div>
+            <p class="footer-text">
+                Material exclusivo para influenciadores, criadores de conteúdo e parceiros da CIGA design Brasil.
+            </p>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 CIGA design Brasil · JG Importadora Ltda · CNPJ 54.869.919/0001-45</span>
+            <span class="footer-badge">Material Interno — Não Distribuir</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

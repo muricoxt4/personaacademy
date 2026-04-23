@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- ============================================================
+       CIGA Design - Playbook de Vendas
+       Arquivo HTML Principal (index.html)
+       ============================================================ -->
+  
+  <!-- META TAGS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Playbook de Vendas CIGA Design Brasil - Guia completo de técnicas de vendas para relógios de alto valor">
+  <meta name="author" content="CIGA Design Brasil">
+  
+  <!-- TÍTULO -->
+  <title>CIGA Design — Playbook de Vendas</title>
+  
+  <!-- CSS EXTERNO -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     ÍNDICE OVERLAY (Modal de navegação)
+     Aparece ao pressionar ESC
+     ============================================================ -->
+<div id="idx" role="dialog" aria-label="Índice">
+  
+  <!-- Cabeçalho do Índice -->
+  <div id="idx-hdr">
+    <span class="lbl">Índice do Playbook</span>
+    <button id="idx-close" aria-label="Fechar índice">ESC para fechar</button>
+  </div>
+  
+  <!-- Lista de Slides -->
+  <div id="idx-list">
+    <!-- 00: Capa -->
+    <a class="idx-i" data-target="s1" role="button" tabindex="0">
+      <span class="idx-num">00</span>
+      <div class="idx-info">
+        <strong>Capa</strong>
+        <span>Playbook de Vendas</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 01: Índice e Missão -->
+    <a class="idx-i" data-target="s2" role="button" tabindex="0">
+      <span class="idx-num">01</span>
+      <div class="idx-info">
+        <strong>Índice e Missão</strong>
+        <span>Visão geral</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 02: DNA da Marca -->
+    <a class="idx-i" data-target="s3" role="button" tabindex="0">
+      <span class="idx-num">02</span>
+      <div class="idx-info">
+        <strong>DNA da Marca</strong>
+        <span>Identidade e diferenciais</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 03: Revendedora Oficial -->
+    <a class="idx-i" data-target="s3b" role="button" tabindex="0">
+      <span class="idx-num">03</span>
+      <div class="idx-info">
+        <strong>Revendedora Oficial</strong>
+        <span>Garantias e autenticidade</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 04: Abordagem Fundamentos -->
+    <a class="idx-i" data-target="s4" role="button" tabindex="0">
+      <span class="idx-num">04</span>
+      <div class="idx-info">
+        <strong>Abordagem: Fundamentos</strong>
+        <span>Rapport e primeiro contato</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 05: Abordagem Técnicas Avançadas -->
+    <a class="idx-i" data-target="s5" role="button" tabindex="0">
+      <span class="idx-num">05</span>
+      <div class="idx-info">
+        <strong>Abordagem: Técnicas Avançadas</strong>
+        <span>Espelhamento e escuta ativa</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 06: Qualificação BANT -->
+    <a class="idx-i" data-target="s6" role="button" tabindex="0">
+      <span class="idx-num">06</span>
+      <div class="idx-info">
+        <strong>Qualificação BANT</strong>
+        <span>Método adaptado ao luxo</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 07: Coleções -->
+    <a class="idx-i" data-target="s7" role="button" tabindex="0">
+      <span class="idx-num">07</span>
+      <div class="idx-info">
+        <strong>Coleções</strong>
+        <span>Storytelling por produto</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 08: Objeções Preço e Valor -->
+    <a class="idx-i" data-target="s8" role="button" tabindex="0">
+      <span class="idx-num">08</span>
+      <div class="idx-info">
+        <strong>Objeções: Preço e Valor</strong>
+        <span>Técnicas de persuasão</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 09: Objeções Confiança e Marca -->
+    <a class="idx-i" data-target="s9" role="button" tabindex="0">
+      <span class="idx-num">09</span>
+      <div class="idx-info">
+        <strong>Objeções: Confiança e Marca</strong>
+        <span>Prova social e autoridade</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 10: Objeções Decisão e Timing -->
+    <a class="idx-i" data-target="s10" role="button" tabindex="0">
+      <span class="idx-num">10</span>
+      <div class="idx-info">
+        <strong>Objeções: Decisão e Timing</strong>
+        <span>Urgência e escassez</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 11: Técnicas de Fechamento -->
+    <a class="idx-i" data-target="s11" role="button" tabindex="0">
+      <span class="idx-num">11</span>
+      <div class="idx-info">
+        <strong>Técnicas de Fechamento</strong>
+        <span>6 métodos high ticket</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 12: Pagamentos Site Oficial -->
+    <a class="idx-i" data-target="s12" role="button" tabindex="0">
+      <span class="idx-num">12</span>
+      <div class="idx-info">
+        <strong>Pagamentos: Site Oficial</strong>
+        <span>usecigadesign.com.br</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 13: Pagamentos Conversão -->
+    <a class="idx-i" data-target="s13" role="button" tabindex="0">
+      <span class="idx-num">13</span>
+      <div class="idx-info">
+        <strong>Pagamentos: Conversão</strong>
+        <span>PIX como arma de vendas</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 14: Pós-venda -->
+    <a class="idx-i" data-target="s14" role="button" tabindex="0">
+      <span class="idx-num">14</span>
+      <div class="idx-info">
+        <strong>Pós-venda</strong>
+        <span>Jornada D+0 a D+90</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 15: Scripts Prontos -->
+    <a class="idx-i" data-target="s15" role="button" tabindex="0">
+      <span class="idx-num">15</span>
+      <div class="idx-info">
+        <strong>Scripts Prontos</strong>
+        <span>WhatsApp, Instagram, e-mail</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+    
+    <!-- 16: KPIs e Metas -->
+    <a class="idx-i" data-target="s16" role="button" tabindex="0">
+      <span class="idx-num">16</span>
+      <div class="idx-info">
+        <strong>KPIs e Metas</strong>
+        <span>O que medir e quando agir</span>
+      </div>
+      <span class="idx-arr">→</span>
+    </a>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVEGAÇÃO FIXA
+     ============================================================ -->
+
+<!-- Contador de Slides (canto inferior direito) -->
+<div id="ctr">01 / 17</div>
+
+<!-- Dots de Navegação (lateral direita) -->
+<div id="ndots"></div>
+
+<!-- Dica de Navegação (canto inferior esquerdo) -->
+<div id="hint">
+  <span class="key">↑</span>
+  <span class="key">↓</span> navegar 
+  <span class="key">ESC</span> índice
+</div>
+
+
+<!-- ============================================================
+     SLIDE 01: CAPA
+     ============================================================ -->
+<section class="slide bg-ink justify-end" id="s1" data-i="0">
+  
+  <!-- Elementos Decorativos de Fundo -->
+  <div class="bg-r cover-bg-1"></div>
+  <div class="bg-r cover-bg-2"></div>
+  <div class="bg-grid"></div>
+  
+  <!-- ===== ESPAÇO PARA IMAGEM DO RELÓGIO NA CAPA ===== -->
+  <!-- Para adicionar uma imagem aqui, descomente a linha abaixo e substitua o src -->
+  <!-- <img src="IMAGENS/relogio-capa.jpg" alt="Relógio CIGA Design" class="product-image cover-image"> -->
+  <!-- ===== FIM ESPAÇO PARA IMAGEM ===== -->
+  
+  <!-- SVG Decorativo (Relógio estilizado) -->
+  <svg class="cover-svg" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+    <circle cx="200" cy="200" r="195" stroke="#C9A84C" stroke-width=".6"/>
+    <circle cx="200" cy="200" r="170" stroke="#C9A84C" stroke-width=".3" stroke-dasharray="4 8"/>
+    <circle cx="200" cy="200" r="140" stroke="#C9A84C" stroke-width=".5"/>
+    <circle cx="200" cy="200" r="80" stroke="#C9A84C" stroke-width=".3"/>
+    <circle cx="200" cy="200" r="8" fill="#C9A84C" opacity=".5"/>
+    <g stroke="#C9A84C" stroke-width="1.5" opacity=".7">
+      <line x1="200" y1="32" x2="200" y2="52"/>
+      <line x1="200" y1="348" x2="200" y2="368"/>
+      <line x1="32" y1="200" x2="52" y2="200"/>
+      <line x1="348" y1="200" x2="368" y2="200"/>
+    </g>
+    <line x1="200" y1="200" x2="200" y2="78" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+    <line x1="200" y1="200" x2="278" y2="200" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+  </svg>
+  
+  <!-- Watermark -->
+  <div class="wm cover-wm">CIGA</div>
+  
+  <!-- Conteúdo Principal -->
+  <div class="cover-content">
+    <!-- Linha superior com logo -->
+    <div class="rv d1 flex items-center gap-lg mb-sm">
+      <span class="text-tx uppercase tracking-wider text-gold">CIGA Design Brasil</span>
+      <div class="line-h"></div>
+    </div>
+    
+    <!-- Título principal -->
+    <h1 class="rv d2 text-cover font-black leading-none tracking-tight text-ivory">
+      Playbook<br>de Vendas
+    </h1>
+    
+    <!-- Subtítulo -->
+    <p class="rv d3 text-tb text-ivory2 max-w-420 mt-sm">
+      Guia completo com técnicas de abordagem, persuasão e vendas consultivas para relógios de alto valor.
+    </p>
+    
+    <!-- Badges -->
+    <div class="rv d4 flex flex-wrap gap-sm items-center mt-md">
+      <span class="site-badge">🌐 usecigadesign.com.br</span>
+      <span class="official-badge">✓ Revendedora Oficial</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 02: ÍNDICE E MISSÃO
+     ============================================================ -->
+<section class="slide bg-ink2" id="s2" data-i="1">
+  <div class="acc"></div>
+  <div class="bg-grid"></div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">01: Índice e Missão</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Este Playbook é a sua Bússola</h2>
+    
+    <!-- Linha de missão -->
+    <div class="rv d3 flex items-center gap-md mb-xs">
+      <span class="text-tx text-ivory3 tracking-wide">MISSÃO</span>
+      <div class="line-flex"></div>
+    </div>
+    
+    <!-- Descrição -->
+    <p class="rv d3 text-tb text-ivory2 max-w-700 mb-lg">
+      Transformar cada interação em uma experiência memorável de luxo acessível. 
+      Não vendemos relógios, criamos conexões emocionais com peças de design premiado mundialmente.
+    </p>
+    
+    <!-- Linha divisória -->
+    <div class="rule rv d3 mb-xs"></div>
+    
+    <!-- Cards de objetivos -->
+    <div class="three rv d4">
+      <div class="card">
+        <div class="ct">🎯 Objetivo</div>
+        <div class="cb">Converter leads qualificados em clientes apaixonados usando técnicas de vendas consultivas e persuasão ética.</div>
+      </div>
+      <div class="card">
+        <div class="ct">💡 Filosofia</div>
+        <div class="cb">O cliente não compra um relógio. Ele compra a história, o reconhecimento e a exclusividade que a CIGA representa.</div>
+      </div>
+      <div class="card">
+        <div class="ct">🏆 Meta</div>
+        <div class="cb">Ticket médio acima de R$3.500, conversão acima de 8%, NPS acima de 75. Cada venda é o início de um relacionamento.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 03: DNA DA MARCA
+     ============================================================ -->
+<section class="slide bg-ink" id="s3" data-i="2">
+  <div class="acc"></div>
+  <div class="wm wm-slide">02</div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">02: DNA da Marca</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">O Que Faz a CIGA Design Única</h2>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1: Lista de diferenciais -->
+      <ul class="gl">
+        <li><strong>Originalidade radical</strong> com design que questiona e nunca copia. Cada modelo é uma declaração.</li>
+        <li><strong>Engenharia visível</strong> onde o mecanismo é o visual do relógio. Transparência total.</li>
+        <li><strong>Luxo acessível</strong> com qualidade de haute horlogerie e preço consciente.</li>
+        <li><strong>Storytelling real</strong> porque cada modelo conta uma história verdadeira e autêntica.</li>
+        <li><strong>Presença global</strong> em mais de 100 países com mais de 500 mil usuários apaixonados.</li>
+      </ul>
+      
+      <!-- Coluna 2: Cards de conquistas -->
+      <div class="flex flex-col gap-xs">
+        <div class="card">
+          <div class="ct">🏅 17 Prêmios Internacionais</div>
+          <div class="cb">iF Design Award, Red Dot, Good Design. Reconhecimento ao lado de Apple, Bulgari e Porsche.</div>
+        </div>
+        <div class="card">
+          <div class="ct">🏆 GPHG 2021</div>
+          <div class="cb">Grand Prix d'Horlogerie de Genève, o "Oscar da Relojoaria". Primeira marca chinesa a vencer.</div>
+        </div>
+        <div class="card">
+          <div class="ct">📰 Mídia Global</div>
+          <div class="cb">Cobertura em The New York Times, Forbes, Wired, Hypebeast. Validação de autoridades.</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Callout -->
+    <div class="callout rv d4 mt-lg">
+      <p><strong>Argumento de autoridade:</strong> "A CIGA ganhou o Oscar da relojoaria mundial em 2021, o Grand Prix de Genebra. É a mesma premiação de marcas como Rolex e Patek Philippe."</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 03B: REVENDEDORA OFICIAL
+     ============================================================ -->
+<section class="slide bg-ink2" id="s3b" data-i="3">
+  <div class="acc"></div>
+  <div class="bg-grid"></div>
+  <div class="wm wm-slide">03</div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">03: Revendedora Oficial</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Autenticidade e Garantias</h2>
+    
+    <!-- Descrição -->
+    <p class="rv d3 text-tb text-ivory2 mb-lg">
+      Somos revendedora oficial da CIGA Design no Brasil. Isso significa segurança total para você e para o cliente.
+    </p>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1 -->
+      <div class="flex flex-col gap-xs">
+        <!-- Box oficial -->
+        <div class="bg-official p-lg">
+          <div class="lbl text-green mb-sm">✓ Somos Revendedora Oficial</div>
+          <p class="text-ts text-ivory2 mb-md">A CIGA Design Brasil (usecigadesign.com.br) é revendedora oficial autorizada. Todos os produtos são originais, com garantia de fábrica.</p>
+          <p class="text-ts text-ivory2"><strong class="text-ivory">Como verificar:</strong> O cliente pode acessar o site internacional da CIGA Design em <span class="text-gold">cigadesign.com</span> e confirmar nossa autorização como distribuidor oficial.</p>
+        </div>
+        
+        <div class="card">
+          <div class="ct">💰 Preço Final, Sem Taxas</div>
+          <div class="cb">Todos os produtos já estão com preço final em reais. O cliente não paga nenhuma taxa de importação, alfândega ou IOF adicional. O valor no site é o valor que ele paga.</div>
+        </div>
+        
+        <div class="card">
+          <div class="ct">📦 Estoque Nacional</div>
+          <div class="cb">Produtos em estoque no Brasil, com envio rápido e rastreamento. Sem espera de importação internacional.</div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2 -->
+      <div class="flex flex-col gap-xs">
+        <div class="card">
+          <div class="ct">🛡️ Garantia de 2 Anos</div>
+          <div class="cb">Garantia oficial de 2 anos com suporte técnico em português. Qualquer problema, resolvemos aqui no Brasil.</div>
+        </div>
+        
+        <div class="card">
+          <div class="ct">📄 Nota Fiscal Brasileira</div>
+          <div class="cb">Emitimos nota fiscal para todas as compras. Produto 100% legalizado e documentado.</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">Script: Quando perguntarem sobre autenticidade</div>
+          <div class="sbt">"[Nome], somos revendedora oficial da CIGA no Brasil. Você pode confirmar acessando o site internacional deles em cigadesign.com. Nossos produtos já vêm com preço final, você não paga nenhuma taxa de importação, e tem garantia de 2 anos com suporte aqui no Brasil."</div>
+        </div>
+        
+        <div class="callout">
+          <p><strong>Diferencial competitivo:</strong> Comprar conosco é mais seguro e mais barato do que importar direto. O cliente evita taxas alfandegárias (que podem chegar a 60% do valor), tem garantia local e recebe muito mais rápido.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 04: ABORDAGEM - FUNDAMENTOS
+     ============================================================ -->
+<section class="slide bg-ink" id="s4" data-i="4">
+  <div class="acc"></div>
+  <div class="bg-grid"></div>
+  <div class="wm wm-slide">04</div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">04: Abordagem do Cliente</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Fundamentos: Os Primeiros 15 Segundos</h2>
+    
+    <!-- Descrição -->
+    <p class="rv d3 text-tb text-ivory2 mb-lg">
+      A primeira impressão define o tom da venda. Cada palavra conta. Cada silêncio também.
+    </p>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1: Fases 1 e 2 -->
+      <div>
+        <div class="approach-phase">
+          <div class="approach-title">Fase 1: Quebra de Gelo (0 a 5 segundos)</div>
+          <div class="approach-time">⏱️ Primeiros 5 segundos</div>
+          <div class="approach-content">
+            <strong>Objetivo:</strong> Criar conexão humana imediata, não parecer um vendedor.<br><br>
+            <strong>Técnica do Nome:</strong> Use o nome do cliente nos primeiros 3 segundos. O nome é a palavra mais poderosa que alguém pode ouvir.<br><br>
+            <strong>Micro-personalização:</strong> Se possível, mencione algo específico que você observou. Por exemplo: "Vi que você curtiu nosso post do Blue Planet..."
+          </div>
+        </div>
+        
+        <div class="approach-phase">
+          <div class="approach-title">Fase 2: Estabelecimento de Valor (5 a 10 segundos)</div>
+          <div class="approach-time">⏱️ Segundos 5 a 10</div>
+          <div class="approach-content">
+            <strong>Objetivo:</strong> Posicionar a CIGA como autoridade instantânea.<br><br>
+            <strong>Técnica do Gancho de Autoridade:</strong> Uma única frase que eleva o status da marca. Nunca comece pelo preço.<br><br>
+            <strong>Gatilhos:</strong> "Oscar da relojoaria", "Top 3 do iF Design ao lado da Apple", "única marca asiática a vencer em Genebra"
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2: Fase 3 e Script -->
+      <div>
+        <div class="approach-phase">
+          <div class="approach-title">Fase 3: Convite à Conversa (10 a 15 segundos)</div>
+          <div class="approach-time">⏱️ Segundos 10 a 15</div>
+          <div class="approach-content">
+            <strong>Objetivo:</strong> Transformar monólogo em diálogo. Fazer o cliente falar.<br><br>
+            <strong>Pergunta Aberta Estratégica:</strong> Perguntas que não podem ser respondidas com "sim" ou "não".<br><br>
+            <strong>Exemplos:</strong> "O que te chamou atenção na CIGA?", "Você está buscando algo para você ou é um presente especial?"
+          </div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">📱 Script Modelo para WhatsApp</div>
+          <div class="sbt">"Olá, [Nome]! Sou [Seu Nome] da CIGA Design. Esse modelo que você viu ganhou o Oscar da relojoaria mundial em 2021, o Grand Prix de Genebra. É a mesma premiação de Rolex e Patek Philippe. O que te chamou atenção nele?"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 05: ABORDAGEM - TÉCNICAS AVANÇADAS
+     ============================================================ -->
+<section class="slide bg-ink2" id="s5" data-i="5">
+  <div class="acc"></div>
+  <div class="wm wm-slide">05</div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">05: Técnicas Avançadas de Abordagem</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Rapport, Espelhamento e Escuta Ativa</h2>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1 -->
+      <div class="flex flex-col gap-xs">
+        <div class="technique-box">
+          <div class="technique-title">🪞 Técnica do Espelhamento</div>
+          <div class="technique-content">
+            Adapte seu estilo de comunicação ao do cliente. Se ele escreve formalmente, seja formal. Se usa emojis, use também (com moderação).<br><br>
+            <strong>Verbal:</strong> Repita palavras-chave que o cliente usa. Se ele diz "sofisticado", use "sofisticado" na resposta.<br>
+            <strong>Ritmo:</strong> Se ele responde rápido, responda rápido. Se demora, não pressione.
+          </div>
+          <div class="technique-script">"Você mencionou que busca algo 'diferente', e é exatamente isso que a CIGA oferece: design que nenhuma outra marca tem."</div>
+        </div>
+        
+        <div class="technique-box">
+          <div class="technique-title">👂 Escuta Ativa: Regra 70/30</div>
+          <div class="technique-content">
+            <strong>70% ouvindo, 30% falando.</strong> O cliente deve falar mais que você.<br><br>
+            <strong>Técnicas de validação:</strong><br>
+            • "Entendo perfeitamente..."<br>
+            • "Faz total sentido..."<br>
+            • "Isso é importante para você, né?"<br><br>
+            <strong>Nunca interrompa.</strong> Espere 2 segundos após o cliente terminar antes de responder.
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2 -->
+      <div class="flex flex-col gap-xs">
+        <div class="technique-box">
+          <div class="technique-title">🎯 Identificando Sinais de Compra</div>
+          <div class="technique-content">
+            <strong>Sinais verbais positivos:</strong><br>
+            • Perguntas sobre formas de pagamento<br>
+            • "Quanto tempo demora pra chegar?"<br>
+            • "Tem essa cor disponível?"<br>
+            • Menção a datas específicas (aniversário, casamento)<br><br>
+            <strong>Ação:</strong> Quando detectar um sinal, avance para o fechamento. Não continue apresentando.
+          </div>
+        </div>
+        
+        <div class="technique-box">
+          <div class="technique-title">💎 Técnica do Storytelling Pessoal</div>
+          <div class="technique-content">
+            Conecte o produto à história do cliente, não à história da marca.<br><br>
+            <strong>Perguntas-gatilho:</strong><br>
+            • "É para marcar alguma conquista especial?"<br>
+            • "Você já teve um relógio mecânico antes?"<br>
+            • "O que você quer sentir quando olhar pro pulso?"
+          </div>
+          <div class="technique-script">"[Nome], esse relógio vai estar no seu pulso em momentos importantes da sua vida. Cada vez que você olhar as horas, vai lembrar dessa conquista."</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Callout -->
+    <div class="callout rv d4 mt-lg">
+      <p><strong>Regra de ouro:</strong> Nunca venda um produto. Venda a transformação que o produto proporciona na vida do cliente.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 06: QUALIFICAÇÃO BANT
+     ============================================================ -->
+<section class="slide bg-ink" id="s6" data-i="6">
+  <div class="acc"></div>
+  <div class="bg-grid"></div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">06: Qualificação</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Método BANT Adaptado ao Luxo</h2>
+    
+    <!-- Descrição -->
+    <p class="rv d3 text-tb text-ivory2 mb-lg">
+      Sutil, nunca invasivo. Pergunte como conversa, não interrogatório.
+    </p>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1 -->
+      <div class="flex flex-col gap-xs">
+        <div class="card">
+          <div class="ct">B: Budget (Orçamento)</div>
+          <div class="cb">
+            <strong>Nunca pergunte:</strong> "Quanto você pode gastar?"<br><br>
+            <strong>Pergunte:</strong> "Temos modelos de R$1.800 a R$12.000. Qual faixa faz mais sentido pra você?"<br><br>
+            <strong>Técnica:</strong> Apresente uma faixa. Deixe o cliente se posicionar. Se ele demonstrar interesse em modelos acima do que você apresentou, faça upsell natural.
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="ct">A: Authority (Autoridade)</div>
+          <div class="cb">
+            <strong>Objetivo:</strong> Descobrir se quem está conversando é quem decide.<br><br>
+            <strong>Pergunte:</strong> "É para seu uso ou algo especial para alguém?" ou "Você está escolhendo junto com alguém?"<br><br>
+            <strong>Se for presente:</strong> Entenda o perfil do presenteado para direcionar a recomendação.
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2 -->
+      <div class="flex flex-col gap-xs">
+        <div class="card">
+          <div class="ct">N: Need (Necessidade)</div>
+          <div class="cb">
+            <strong>Descubra:</strong><br>
+            • Uso: cotidiano, evento especial, coleção, presente?<br>
+            • Estética: minimalista ou bold?<br>
+            • Primeira experiência com relógio mecânico?<br><br>
+            <strong>Pergunte:</strong> "O que você quer sentir quando olhar pro relógio?"
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="ct">T: Timeline (Prazo)</div>
+          <div class="cb">
+            <strong>Pergunte:</strong> "Tem alguma data especial em mente?" ou "Quando você gostaria de estar com ele no pulso?"<br><br>
+            <strong>Urgência genuína:</strong> Aniversários, formaturas, casamentos, promoções no trabalho. Use a data como âncora para o fechamento.<br><br>
+            <strong>Nunca force urgência falsa.</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Callout -->
+    <div class="callout rv d4 mt-lg">
+      <p>Ouça <strong>70%</strong> do tempo. Fale <strong>30%</strong>. A cada pergunta, espere a resposta completa antes de continuar.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 07: COLEÇÕES (Apresentação de Produto)
+     ============================================================ -->
+<section class="slide bg-gradient-dark" id="s7" data-i="7">
+  <div class="acc"></div>
+  <div class="wm wm-slide">07</div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">07: Apresentação de Produto</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Storytelling por Coleção</h2>
+    
+    <!-- Descrição -->
+    <p class="rv d2 text-ts text-ivory3 mb-lg">
+      Modelos disponíveis em usecigadesign.com.br. Para ver fotos e detalhes, acesse o site ou nossas redes sociais.
+    </p>
+    
+    <!-- ===== ESPAÇO PARA IMAGENS DOS PRODUTOS ===== -->
+    <!-- Você pode adicionar imagens dos produtos aqui. Exemplo:
+    <div class="flex gap-md flex-wrap mb-md">
+      <img src="IMAGENS/blue-planet.jpg" alt="Blue Planet" class="product-image">
+      <img src="IMAGENS/series-z.jpg" alt="Series Z" class="product-image">
+      <img src="IMAGENS/eye-of-horus.jpg" alt="Eye of Horus" class="product-image">
+    </div>
+    -->
+    <!-- ===== FIM ESPAÇO PARA IMAGENS ===== -->
+    
+    <!-- Lista de Produtos -->
+    <div class="rv d3 flex flex-col">
+      <!-- Blue Planet -->
+      <div class="ci">
+        <div class="cib"></div>
+        <div>
+          <div class="cin">🌍 Blue Planet (Série U)</div>
+          <div class="cih">Vencedor do GPHG 2021. "Cada vez que você olha as horas, vê o planeta inteiro no pulso. É carregar o mundo com você." Dial esculpido com micro-gravura CNC que reproduz a Terra em escala real.</div>
+          <div class="cip">Titânio ou Aço Inoxidável • Cristal de Safira • Movimento Automático</div>
+        </div>
+      </div>
+      
+      <!-- Series Z -->
+      <div class="ci">
+        <div class="cib"></div>
+        <div>
+          <div class="cin">⚙️ Series Z</div>
+          <div class="cih">"Enquanto outros relógios escondem o movimento, a CIGA o celebra. Você vê o coração do relógio batendo." Design esqueletizado premiado no German Design Award 2020.</div>
+          <div class="cip">Aço Inoxidável 316L • Design Tonneau • Movimento Automático CD-01</div>
+        </div>
+      </div>
+      
+      <!-- Eye of Horus -->
+      <div class="ci">
+        <div class="cib"></div>
+        <div>
+          <div class="cin">👁️ Eye of Horus (Série X)</div>
+          <div class="cih">"O Olho de Hórus representa poder, proteção e cura. Um relógio para quem ousa se destacar." Case em biocerâmica com design totalmente esqueletizado, frente e verso transparentes.</div>
+          <div class="cip">Biocerâmica Premium • Esqueleto 360° • Super leve e confortável</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Nota -->
+    <div class="rv d4 flex items-center gap-md mt-xs">
+      <span class="text-tx text-ivory3 tracking-wide">Para ver todos os modelos e fotos detalhadas, acesse usecigadesign.com.br ou @cigadesignbrasil</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 08: OBJEÇÕES - PREÇO E VALOR
+     ============================================================ -->
+<section class="slide bg-ink" id="s8" data-i="8">
+  <div class="acc"></div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">08: Objeções de Preço e Valor</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Técnicas de Persuasão: Quando o Cliente Resiste ao Preço</h2>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1 -->
+      <div class="flex flex-col gap-xs">
+        <!-- Objeção 1: É caro demais -->
+        <div class="objection-full">
+          <div class="objection-header">💰 "É caro demais."</div>
+          <div class="objection-context">O cliente está comparando o preço com sua percepção de valor, não com o valor real do produto.</div>
+          <div class="objection-technique">Técnica: Reframing + Ancoragem</div>
+          <div class="objection-response">
+            <strong>Passo 1, Valide:</strong> "Entendo. É um investimento importante mesmo."<br><br>
+            <strong>Passo 2, Reframe:</strong> "Deixa eu te mostrar por que faz sentido: a CIGA ganhou 17 prêmios internacionais, incluindo o Oscar da relojoaria mundial. Marcas com esse reconhecimento costumam custar 10x mais."<br><br>
+            <strong>Passo 3, Ancoragem:</strong> "Pense assim: um jantar especial são R$300, um tênis de marca R$800, uma viagem curta R$2.000. O relógio dura décadas e você vai usar todos os dias."<br><br>
+            <strong>Passo 4, PIX:</strong> "E pagando via PIX no site, você ainda tem 10% de desconto automático."
+          </div>
+          <div class="objection-example">"[Nome], a CIGA compete com marcas de R$15.000 a R$30.000 em qualidade e design. Você está levando um relógio premiado mundialmente por uma fração. E no PIX, ainda ganha 10% de desconto."</div>
+        </div>
+        
+        <!-- Objeção 2: Não tenho dinheiro -->
+        <div class="objection-full">
+          <div class="objection-header">💰 "Não tenho esse dinheiro agora."</div>
+          <div class="objection-context">Pode ser uma objeção real ou uma forma educada de dizer "não". Descubra qual é.</div>
+          <div class="objection-technique">Técnica: Opções + Pergunta de Descoberta</div>
+          <div class="objection-response">
+            <strong>Opção 1, Parcelamento:</strong> "No site oficial, você parcela em até 10x sem juros. Fica [valor]/mês. Cabe no orçamento?"<br><br>
+            <strong>Opção 2, Descoberta:</strong> "Se o valor não fosse um problema, esse seria o modelo que você escolheria?"<br><br>
+            Se a resposta for "sim", o problema é financeiro. Trabalhe o parcelamento.<br>
+            Se a resposta for hesitante, há outra objeção escondida. Pergunte: "O que mais te faz pensar duas vezes?"
+          </div>
+          <div class="objection-example">"[Nome], no site fica 10x de R$350 sem juros no cartão. É menos que uma assinatura de academia por mês, e você leva um relógio que vai durar décadas."</div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2 -->
+      <div class="flex flex-col gap-xs">
+        <!-- Objeção 3: Tem desconto? -->
+        <div class="objection-full">
+          <div class="objection-header">💰 "Tem desconto?"</div>
+          <div class="objection-context">O cliente quer sentir que está fazendo um bom negócio. Dê a ele essa sensação.</div>
+          <div class="objection-technique">Técnica: Oferta Oficial + Escassez Real</div>
+          <div class="objection-response">
+            <strong>Resposta direta:</strong> "Sim! No site oficial usecigadesign.com.br, pagando via PIX você tem 10% de desconto automático. É o maior desconto que oferecemos."<br><br>
+            <strong>Adicione valor:</strong> "Além disso, o frete é grátis para todo o Brasil e a entrega é rápida."<br><br>
+            <strong>Se insistir:</strong> "Esse desconto do PIX é exclusivo do site oficial. E diferente de outras marcas, a CIGA não faz Black Friday. Quando o modelo acaba, não volta. São edições colecionáveis."
+          </div>
+          <div class="objection-example">"[Nome], o PIX já é a nossa melhor condição: 10% de desconto automático no checkout. E ainda tem frete grátis. É a forma mais inteligente de levar."</div>
+        </div>
+        
+        <!-- Objeção 4: Vou esperar promoção -->
+        <div class="objection-full">
+          <div class="objection-header">💰 "Vou esperar uma promoção."</div>
+          <div class="objection-context">O cliente acredita que haverá uma oferta melhor no futuro.</div>
+          <div class="objection-technique">Técnica: Escassez Real + Educação</div>
+          <div class="objection-response">
+            <strong>Eduque:</strong> "Entendo o raciocínio, mas a CIGA funciona diferente. Nossos modelos são edições limitadas. Quando acabam, não voltam."<br><br>
+            <strong>Escassez real:</strong> "O Blue Planet que ganhou o GPHG, por exemplo, algumas versões já esgotaram e hoje valem mais no mercado secundário do que custavam originalmente."<br><br>
+            <strong>PIX como promoção:</strong> "O PIX com 10% OFF já é a promoção. E está disponível agora."
+          </div>
+          <div class="objection-example">"[Nome], a CIGA não faz liquidação. São peças de colecionador. O desconto do PIX é permanente, mas o estoque não é. Esse modelo específico tem [X] unidades disponíveis."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 09: OBJEÇÕES - CONFIANÇA E MARCA
+     ============================================================ -->
+<section class="slide bg-ink2" id="s9" data-i="9">
+  <div class="acc"></div>
+  <div class="bg-grid"></div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">09: Objeções de Confiança e Marca</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Construindo Credibilidade: Quando o Cliente Desconhece a Marca</h2>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1 -->
+      <div class="flex flex-col gap-xs">
+        <!-- Objeção 1: Nunca ouvi falar -->
+        <div class="objection-full">
+          <div class="objection-header">🤔 "Nunca ouvi falar da CIGA."</div>
+          <div class="objection-context">Natural. A CIGA é nichada por design, reconhecida por quem aprecia design avançado.</div>
+          <div class="objection-technique">Técnica: Prova Social + Autoridade Externa</div>
+          <div class="objection-response">
+            <strong>Normalize:</strong> "É natural. A CIGA não faz propaganda massiva. Ela é descoberta por quem pesquisa design seriamente."<br><br>
+            <strong>Autoridade externa:</strong> "Mas foi capa do The New York Times na seção de relógios, destaque na Forbes e Wired. Ganhou 17 prêmios internacionais, incluindo o Grand Prix de Genebra, o Oscar da relojoaria."<br><br>
+            <strong>Prova social:</strong> "São mais de 500 mil clientes em 100+ países. Quem descobre raramente compra só um."
+          </div>
+          <div class="objection-example">"[Nome], a CIGA é como um restaurante que não precisa de propaganda. Você descobre por indicação e reconhecimento de quem entende. O New York Times, Forbes e o maior prêmio de relojoaria do mundo já reconheceram."</div>
+        </div>
+        
+        <!-- Objeção 2: Prefiro Rolex -->
+        <div class="objection-full">
+          <div class="objection-header">🤔 "Prefiro Rolex, Tissot ou Omega."</div>
+          <div class="objection-context">O cliente está comparando a CIGA com marcas tradicionais que ele já conhece.</div>
+          <div class="objection-technique">Técnica: Reposicionamento (Não é Competição)</div>
+          <div class="objection-response">
+            <strong>Não confronte:</strong> "Rolex é incrível para quem busca tradição. A CIGA não compete com ela. É para quem já tem (ou não quer) o tradicional e busca algo genuinamente diferente."<br><br>
+            <strong>Reposicione:</strong> "A CIGA é design de vanguarda premiado. É para quem quer ser notado por originalidade, não por ostentação."<br><br>
+            <strong>Autoridade:</strong> "Aliás, a CIGA ganhou o mesmo prêmio que a Rolex já ganhou, o Grand Prix de Genebra. Só que com um design que nenhuma outra marca oferece."
+          </div>
+          <div class="objection-example">"[Nome], muitos dos nossos clientes têm Rolex, Omega, TAG Heuer. A CIGA é o relógio que eles usam quando querem algo diferente, quando querem mostrar personalidade, não status."</div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2 -->
+      <div class="flex flex-col gap-xs">
+        <!-- Objeção 3: Feito na China? -->
+        <div class="objection-full">
+          <div class="objection-header">🤔 "É feito na China?"</div>
+          <div class="objection-context">Preconceito sobre origem. Transforme isso em diferencial.</div>
+          <div class="objection-technique">Técnica: Reframe + Comparação Inteligente</div>
+          <div class="objection-response">
+            <strong>Confirme com orgulho:</strong> "Sim, a CIGA é uma marca chinesa. Assim como a Apple fabrica na Ásia, a DJI revolucionou drones e a Huawei a telecomunicação."<br><br>
+            <strong>Qualidade:</strong> "Os materiais são os mesmos de marcas suíças: titânio aeronáutico, cristal de safira, movimento mecânico de precisão."<br><br>
+            <strong>Autoridade:</strong> "E o reconhecimento? 17 prêmios internacionais e o Grand Prix de Genebra. Jurados suíços, alemães, franceses premiaram a CIGA. Qualidade não tem nacionalidade."
+          </div>
+          <div class="objection-example">"[Nome], a China hoje produz a tecnologia mais avançada do mundo. A CIGA é prova disso. Foi premiada pelos maiores especialistas europeus de relojoaria. Qualidade é engenharia mais materiais mais design. Origem é só geografia."</div>
+        </div>
+        
+        <!-- Objeção 4: Não confio em comprar online -->
+        <div class="objection-full">
+          <div class="objection-header">🤔 "Não confio em comprar online."</div>
+          <div class="objection-context">Medo de fraude ou de não receber o produto.</div>
+          <div class="objection-technique">Técnica: Garantias + Prova Social de Volume</div>
+          <div class="objection-response">
+            <strong>Garantias:</strong> "Você compra pelo site oficial usecigadesign.com.br, com nota fiscal, garantia de 2 anos e suporte em português."<br><br>
+            <strong>Volume:</strong> "São mais de 500 mil clientes no mundo todo. Você pode ver avaliações reais no Google e no Instagram."<br><br>
+            <strong>Segurança:</strong> "O site tem checkout seguro, e você pode pagar via PIX (10% OFF) ou cartão em 10x sem juros. Frete grátis para todo o Brasil e rastreamento completo."
+          </div>
+          <div class="objection-example">"[Nome], entendo a preocupação. Mas o site oficial tem mais de 4.8 de avaliação, checkout seguro, nota fiscal brasileira e garantia de 2 anos. Se tiver qualquer problema, estou aqui pessoalmente pra resolver."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 10: OBJEÇÕES - DECISÃO E TIMING
+     ============================================================ -->
+<section class="slide bg-ink" id="s10" data-i="10">
+  <div class="acc"></div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">10: Objeções de Decisão e Timing</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Acelerando a Decisão: Quando o Cliente Hesita</h2>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1 -->
+      <div class="flex flex-col gap-xs">
+        <!-- Objeção 1: Quero pensar -->
+        <div class="objection-full">
+          <div class="objection-header">⏳ "Quero pensar mais."</div>
+          <div class="objection-context">A objeção mais comum. Geralmente esconde outra objeção ou falta de urgência.</div>
+          <div class="objection-technique">Técnica: Descoberta + Oferta de Valor</div>
+          <div class="objection-response">
+            <strong>Passo 1, Valide:</strong> "Claro, é uma decisão importante. Faz sentido pensar bem."<br><br>
+            <strong>Passo 2, Descubra:</strong> "Posso te perguntar: o que especificamente te faz querer pensar mais? É o modelo, o valor, ou alguma outra dúvida?"<br><br>
+            <strong>Passo 3, Ofereça:</strong> "Enquanto você pensa, posso te enviar mais fotos e detalhes sobre os prêmios? Tem tudo no site e no nosso Instagram."<br><br>
+            <strong>Passo 4, Escassez gentil:</strong> "Só te aviso que esse modelo tem estoque limitado. Se ele esgotar, posso te avisar quando voltar, ok?"
+          </div>
+          <div class="objection-example">"[Nome], entendo perfeitamente. Me conta: o que te faz querer pensar mais? É sobre o modelo em si ou tem alguma dúvida que eu possa esclarecer agora? Quero ter certeza de que você tem tudo pra decidir com confiança."</div>
+        </div>
+        
+        <!-- Objeção 2: Vou falar com esposa/marido -->
+        <div class="objection-full">
+          <div class="objection-header">⏳ "Vou falar com minha esposa/marido."</div>
+          <div class="objection-context">Pode ser verdade ou uma desculpa. Facilite a conversa deles.</div>
+          <div class="objection-technique">Técnica: Facilitação + Inclusão</div>
+          <div class="objection-response">
+            <strong>Facilite:</strong> "Perfeito! Posso mandar um resumo completo com fotos e todas as informações pra vocês decidirem juntos? Tem tudo no site também."<br><br>
+            <strong>Inclua:</strong> "Se quiser, posso conversar com vocês dois ao mesmo tempo. Às vezes ajuda ter alguém pra responder as dúvidas na hora."<br><br>
+            <strong>Crie urgência gentil:</strong> "Vocês têm uma data em mente? Assim posso garantir que o modelo esteja disponível quando decidirem."
+          </div>
+          <div class="objection-example">"[Nome], faz total sentido conversar com ela/ele. Deixa eu te mandar o link do modelo no site, tem todas as fotos e detalhes lá. Posso mandar agora?"</div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2 -->
+      <div class="flex flex-col gap-xs">
+        <!-- Objeção 3: Posso ver antes? -->
+        <div class="objection-full">
+          <div class="objection-header">⏳ "Posso ver antes de comprar?"</div>
+          <div class="objection-context">O cliente quer a experiência tátil. Compense com experiência visual.</div>
+          <div class="objection-technique">Técnica: Experiência Virtual + Garantia</div>
+          <div class="objection-response">
+            <strong>Reconheça:</strong> "Entendo. É natural querer ver pessoalmente. Vendemos exclusivamente online, mas compensamos isso de outras formas."<br><br>
+            <strong>Experiência visual:</strong> "No site você encontra fotos detalhadas de todos os ângulos. No nosso Instagram também tem vídeos mostrando o relógio em movimento. Posso te mandar o link?"<br><br>
+            <strong>Garantia:</strong> "E se quando chegar não for o que você esperava, temos política de troca. A pulseira, por exemplo, é quick-release, você ajusta em segundos sem ferramentas."
+          </div>
+          <div class="objection-example">"[Nome], vou te mandar o link do modelo no site. Lá tem fotos de todos os ângulos, e no nosso Instagram você vê vídeos do relógio em movimento. E se tiver qualquer problema quando chegar, a gente resolve juntos."</div>
+        </div>
+        
+        <!-- Objeção 4: Tem garantia? -->
+        <div class="objection-full">
+          <div class="objection-header">⏳ "Tem garantia?"</div>
+          <div class="objection-context">O cliente quer segurança. Dê isso a ele com confiança.</div>
+          <div class="objection-technique">Técnica: Garantia + Diferencial</div>
+          <div class="objection-response">
+            <strong>Garantia oficial:</strong> "Sim! 2 anos de garantia oficial, com suporte técnico aqui no Brasil, em português."<br><br>
+            <strong>Diferencial:</strong> "Cada relógio passa por inspeção de qualidade antes de sair da fábrica. A taxa de defeito da CIGA é menor que 0.5%, muito abaixo da média do mercado."<br><br>
+            <strong>Suporte:</strong> "E você tem meu contato direto. Qualquer coisa, é só me chamar."
+          </div>
+          <div class="objection-example">"[Nome], garantia de 2 anos com suporte em português, aqui no Brasil. E você tem meu WhatsApp. Se precisar de qualquer coisa, estou aqui. Nossa prioridade é que você ame o relógio."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 11: TÉCNICAS DE FECHAMENTO
+     ============================================================ -->
+<section class="slide bg-ink2" id="s11" data-i="11">
+  <div class="acc"></div>
+  <div class="bg-grid"></div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">11: Fechamento</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">6 Técnicas de Fechamento High Ticket</h2>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1: Técnicas 1-3 -->
+      <div class="flex flex-col gap-xs">
+        <div class="tc">
+          <div class="tcn">01</div>
+          <div class="tct">Assumptive Close</div>
+          <div class="tcb">Aja como se a venda já estivesse feita. Avance naturalmente para os detalhes logísticos.</div>
+          <div class="tcs">"Perfeito! Para a entrega, o endereço de São Paulo está correto?"</div>
+        </div>
+        
+        <div class="tc">
+          <div class="tcn">02</div>
+          <div class="tct">Choice Close</div>
+          <div class="tcb">Dê duas opções, ambas levam ao fechamento. O cliente escolhe COMO comprar, não SE comprar.</div>
+          <div class="tcs">"Blue Planet Original ou o Atlantic? Ambos chegam em poucos dias com frete grátis."</div>
+        </div>
+        
+        <div class="tc">
+          <div class="tcn">03</div>
+          <div class="tct">Scarcity Close</div>
+          <div class="tcb">Use escassez REAL apenas. Nunca fabricada. Mentir destrói confiança permanentemente.</div>
+          <div class="tcs">"Esse modelo específico tem apenas 2 unidades em estoque. É edição limitada numerada."</div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2: Técnicas 4-6 -->
+      <div class="flex flex-col gap-xs">
+        <div class="tc">
+          <div class="tcn">04</div>
+          <div class="tct">Summary Close</div>
+          <div class="tcb">Resuma todos os benefícios antes de fechar. Reforce o valor acumulado da oferta.</div>
+          <div class="tcs">"Então: frete grátis, 10x sem juros ou 10% OFF no PIX, garantia de 2 anos, rastreamento completo. Fechamos assim?"</div>
+        </div>
+        
+        <div class="tc">
+          <div class="tcn">05</div>
+          <div class="tct">Puppy Dog Close</div>
+          <div class="tcb">Reduza o risco percebido. Faça o cliente sentir que não tem nada a perder.</div>
+          <div class="tcs">"Posso criar o pedido agora pra garantir o estoque. Se não for exatamente o que você esperava, tratamos com total flexibilidade."</div>
+        </div>
+        
+        <div class="tc">
+          <div class="tcn">06</div>
+          <div class="tct">Emotional Close</div>
+          <div class="tcb">Conecte ao sentimento. Especialmente poderoso para presentes e marcos de vida.</div>
+          <div class="tcs">"Imagina a expressão dele ao abrir a caixa e ver um relógio que ganhou o Oscar da relojoaria mundial. Esse momento não tem preço."</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Callout -->
+    <div class="callout rv d4 mt-lg">
+      <p><strong>Regra de ouro:</strong> Quando detectar um sinal de compra, pare de apresentar e feche. Continuar vendendo depois do "sim mental" do cliente pode fazê-lo voltar atrás.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 12: PAGAMENTOS - SITE OFICIAL
+     ============================================================ -->
+<section class="slide bg-ink" id="s12" data-i="12">
+  <div class="acc"></div>
+  <div class="bg-grid"></div>
+  <div class="wm wm-slide">12</div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">12: Política de Pagamentos</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Site Oficial: usecigadesign.com.br</h2>
+    
+    <!-- Aviso importante -->
+    <p class="rv d2 text-tb text-gold mb-lg">
+      Todas as compras são realizadas exclusivamente pelo site oficial. Nunca aceite pagamentos fora da plataforma.
+    </p>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1 -->
+      <div class="flex flex-col gap-xs">
+        <div class="lbl mb-sm">Formas de pagamento disponíveis</div>
+        
+        <!-- PIX (destacado) -->
+        <div class="pay hi">
+          <div class="pay-ic">⚡</div>
+          <div class="pay-nm">PIX: 10% de Desconto Automático</div>
+          <div class="pay-dt">Ao selecionar PIX no checkout do site, o desconto de <strong class="text-gold-l">10% é aplicado automaticamente</strong>. Aprovação instantânea, pedido confirmado na hora.</div>
+          <div class="pay-tip">→ MELHOR OPÇÃO: maior desconto + aprovação imediata + zero burocracia</div>
+        </div>
+        
+        <!-- Cartão -->
+        <div class="pay">
+          <div class="pay-ic">💳</div>
+          <div class="pay-nm">Cartão de Crédito: 10x Sem Juros</div>
+          <div class="pay-dt">Parcelamento em até <strong class="text-ivory">10x sem juros</strong> nas principais bandeiras (Visa, Mastercard, Elo, American Express). Valor dividido sem acréscimo.</div>
+          <div class="pay-tip">→ Apresente sempre como: "10x de R$[X]/mês sem juros"</div>
+        </div>
+        
+        <!-- Benefícios do site oficial -->
+        <div class="p-md" style="background:rgba(201,168,76,.08);border:1px solid var(--gold)">
+          <div class="lbl text-gold-l mb-sm">✅ Benefícios do Site Oficial</div>
+          <ul class="gl">
+            <li><strong class="text-ivory">Frete Grátis</strong> para todo o Brasil, sem valor mínimo</li>
+            <li><strong class="text-ivory">Entrega Rápida</strong> com rastreamento completo</li>
+            <li><strong class="text-ivory">10% OFF no PIX</strong> desconto automático no checkout</li>
+            <li><strong class="text-ivory">10x Sem Juros</strong> parcelamento no cartão de crédito</li>
+            <li><strong class="text-ivory">Garantia de 2 Anos</strong> com suporte em português</li>
+            <li><strong class="text-ivory">Nota Fiscal</strong> produto original com documentação</li>
+            <li><strong class="text-ivory">Preço Final</strong> sem taxas de importação ou IOF</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Coluna 2: Reversão de bloqueios -->
+      <div class="flex flex-col gap-xs">
+        <div class="lbl" style="color:#E07070;margin-bottom:.2em">⚠ Reversão de Bloqueios de Cartão</div>
+        
+        <div class="lp">
+          <div class="lpq">🔴 "Meu cartão foi recusado"</div>
+          <div class="lpa">
+            <strong>É normal</strong> em compras de alto valor. O banco bloqueia por segurança.<br><br>
+            <strong>Oriente o cliente:</strong><br>
+            1. Ligar para o banco ou acessar o app<br>
+            2. Autorizar compras online/internacionais<br>
+            3. Tentar novamente no site<br><br>
+            <strong>Alternativa imediata:</strong> "Enquanto isso, via PIX você tem 10% de desconto e aprovação instantânea, sem depender do banco."
+          </div>
+        </div>
+        
+        <div class="lp">
+          <div class="lpq">🔴 "Bloqueado por suspeita de fraude"</div>
+          <div class="lpa">
+            <strong>Script:</strong> "É proteção automática do banco. Eles bloqueiam compras maiores por segurança. Você só precisa confirmar no app do banco que foi você. Leva menos de 2 minutos."<br><br>
+            <strong>Se persistir:</strong> "Via PIX você elimina qualquer bloqueio bancário e ainda ganha 10% de desconto. Quer que eu te envie o link direto?"
+          </div>
+        </div>
+        
+        <div class="callout">
+          <p class="text-ts"><strong>Regra de ouro:</strong> Nunca deixe o cliente resolver o problema de pagamento sozinho. Acompanhe cada etapa até a confirmação do pedido.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 13: PAGAMENTOS - CONVERSÃO
+     ============================================================ -->
+<section class="slide bg-ink2" id="s13" data-i="13">
+  <div class="acc"></div>
+  <div class="bg-grid"></div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">13: Pagamentos (continuação)</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">PIX como Arma de Conversão</h2>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1 -->
+      <div class="flex flex-col gap-xs">
+        <div class="card">
+          <div class="ct">Nunca fale o preço total primeiro</div>
+          <div class="cb">Comece pelo parcelamento. O impacto psicológico de "R$350/mês" é muito menor que "R$3.500".<br><br><em class="text-gold">"A partir de R$350/mês sem juros você leva um relógio vencedor do Oscar da relojoaria mundial."</em></div>
+        </div>
+        
+        <div class="card">
+          <div class="ct">PIX é o fechamento definitivo</div>
+          <div class="cb">Quando houver resistência ao valor ou hesitação:<br><br><em class="text-gold">"Pagando agora via PIX no site você tem 10% de desconto automático. De R$3.500 fica R$3.150, e o pedido é confirmado na hora."</em></div>
+        </div>
+        
+        <div class="card">
+          <div class="ct">Ancora no valor, não no preço</div>
+          <div class="cb">Compare com experiências, não com outros produtos:<br><br>• Jantar premium: R$300 (uma noite)<br>• Tênis de marca: R$800 (2 anos)<br>• Viagem curta: R$2.000 (dias)<br>• CIGA Design: décadas de uso diário + patrimônio de design premiado</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">Script para lead travado no preço</div>
+          <div class="sbt">"[Nome], no cartão fica 10x de R$[X] sem juros, menos que uma academia por mês. Ou, via PIX, você tem 10% de desconto na hora. Qual das duas faz mais sentido pra você?"</div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2 -->
+      <div class="flex flex-col gap-xs">
+        <div class="lbl mb-sm">Objeções financeiras: respostas prontas</div>
+        
+        <div class="op">
+          <div class="opq">"Não tenho limite no cartão."</div>
+          <div class="opa"><strong>PIX resolve:</strong> não depende de limite, aprovação instantânea, 10% de desconto. "Via PIX você não precisa de limite. O pagamento sai direto da conta com 10% OFF."</div>
+        </div>
+        
+        <div class="op">
+          <div class="opq">"Só tenho débito."</div>
+          <div class="opa"><strong>PIX é débito:</strong> "PIX funciona exatamente assim. Sai da conta na hora, aprovação imediata, e você ainda ganha 10% de desconto. Posso te enviar o link agora?"</div>
+        </div>
+        
+        <div class="op">
+          <div class="opq">"Não confio em comprar online."</div>
+          <div class="opa"><strong>Garantias:</strong> "Site oficial com checkout seguro, nota fiscal, garantia de 2 anos, frete grátis com rastreamento, e mais de 500 mil clientes no mundo. Posso te mostrar as avaliações reais no Google?"</div>
+        </div>
+        
+        <div class="op">
+          <div class="opq">"Vou esperar uma promoção."</div>
+          <div class="opa"><strong>PIX já é a promoção:</strong> "O desconto de 10% no PIX é permanente, é a nossa melhor condição. E a CIGA não faz Black Friday: edições colecionáveis não entram em liquidação. Quando acaba, não volta."</div>
+        </div>
+        
+        <div class="callout mt-xs">
+          <p class="text-ts"><strong>Link do site:</strong> <span class="text-gold">usecigadesign.com.br</span> Sempre direcione o cliente para o checkout oficial.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 14: PÓS-VENDA
+     ============================================================ -->
+<section class="slide bg-gradient-dark" id="s14" data-i="14">
+  <div class="acc"></div>
+  <div class="wm wm-slide">14</div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">14: Pós-venda</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">A Venda Começa Depois do Pagamento</h2>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1: Timeline -->
+      <div class="tl">
+        <div class="tl-i">
+          <div class="tl-l">
+            <div class="tl-d"><span>D+0</span></div>
+            <div class="tl-ln"></div>
+          </div>
+          <div class="tl-r">
+            <div class="tl-t">Confirmação Premium</div>
+            <div class="tl-b">Confirmação personalizada + código de rastreamento + história do modelo comprado.</div>
+          </div>
+        </div>
+        
+        <div class="tl-i">
+          <div class="tl-l">
+            <div class="tl-d"><span>D+1</span></div>
+            <div class="tl-ln"></div>
+          </div>
+          <div class="tl-r">
+            <div class="tl-t">Antecipação</div>
+            <div class="tl-b">Mensagem criando expectativa: prêmios, contexto de design, curiosidade exclusiva sobre o modelo.</div>
+          </div>
+        </div>
+        
+        <div class="tl-i">
+          <div class="tl-l">
+            <div class="tl-d"><span>D+3</span></div>
+            <div class="tl-ln"></div>
+          </div>
+          <div class="tl-r">
+            <div class="tl-t">Despacho Ritual</div>
+            <div class="tl-b">Foto da embalagem premium (se possível). Instrução de cuidados e manutenção do relógio.</div>
+          </div>
+        </div>
+        
+        <div class="tl-i">
+          <div class="tl-l">
+            <div class="tl-d"><span>Entrega</span></div>
+            <div class="tl-ln"></div>
+          </div>
+          <div class="tl-r">
+            <div class="tl-t">Unboxing Experience</div>
+            <div class="tl-b">Incentive foto/vídeo do unboxing. Ofereça hashtag e marca nas redes sociais da CIGA.</div>
+          </div>
+        </div>
+        
+        <div class="tl-i">
+          <div class="tl-l">
+            <div class="tl-d"><span>D+7</span></div>
+            <div class="tl-ln"></div>
+          </div>
+          <div class="tl-r">
+            <div class="tl-t">Follow-up</div>
+            <div class="tl-b">Pergunte sobre a experiência. Solicite avaliação no Google e Instagram.</div>
+          </div>
+        </div>
+        
+        <div class="tl-i">
+          <div class="tl-l">
+            <div class="tl-d"><span>D+90</span></div>
+          </div>
+          <div class="tl-r">
+            <div class="tl-t">Fidelização</div>
+            <div class="tl-b">Convite a cliente especial. Acesso antecipado a lançamentos. Programa de indicação com benefícios.</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2: Scripts -->
+      <div class="flex flex-col gap-xs">
+        <div class="sb">
+          <div class="sbc">Confirmação (Dia 0)</div>
+          <div class="sbt">"[Nome], seu pedido foi confirmado! 🎉 Você acabou de se tornar parte de um grupo seleto. O [modelo] é reconhecido como um dos relógios mais inovadores do mundo pelo GPHG. Em breve você recebe o código de rastreamento!"</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">Antecipação (Dia 1)</div>
+          <div class="sbt">"[Nome], curiosidade sobre seu [modelo]: ele levou 3 anos de desenvolvimento e usa [característica específica]. Poucos sabem disso. Seu relógio está sendo preparado com todo cuidado."</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">Follow-up (Dia 7)</div>
+          <div class="sbt">"Já faz uma semana com o [modelo] no pulso! Como está sendo a experiência? Adoramos ver nossos relógios em movimento. Se tiver uma foto, compartilha comigo? 📸"</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">Fidelização (Dia 90)</div>
+          <div class="sbt">"[Nome], como cliente especial da CIGA, você tem acesso antecipado ao nosso próximo lançamento antes de todo mundo. Posso te mostrar em primeira mão?"</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 15: SCRIPTS PRONTOS
+     ============================================================ -->
+<section class="slide bg-ink" id="s15" data-i="15">
+  <div class="acc"></div>
+  <div class="bg-grid"></div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">15: Scripts Prontos</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">Templates por Canal</h2>
+    
+    <!-- Conteúdo em duas colunas -->
+    <div class="two rv d3">
+      <!-- Coluna 1 -->
+      <div class="flex flex-col gap-xs">
+        <div class="sb">
+          <div class="sbc">📱 WhatsApp: Primeiro Contato</div>
+          <div class="sbt">"Olá, [Nome]! Sou [Seu Nome] da CIGA Design Brasil. Vi que você se interessou pelo [modelo]. Ele ganhou o Oscar da relojoaria mundial em 2021. Posso te contar mais sobre ele?"</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">📱 WhatsApp: Envio de Catálogo</div>
+          <div class="sbt">"Estou enviando nosso catálogo completo! No site oficial (usecigadesign.com.br) você tem frete grátis para todo o Brasil, 10x sem juros no cartão ou 10% OFF no PIX. Estou aqui pra te ajudar a escolher o modelo perfeito."</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">📧 E-mail: Proposta Formal</div>
+          <div class="sbt">"Prezado(a) [Nome],<br><br>Conforme conversamos, segue a proposta personalizada para o [modelo]. No site oficial você tem:<br>• Frete grátis para todo o Brasil<br>• Parcelamento em 10x sem juros<br>• 10% de desconto no PIX<br>• Garantia de 2 anos<br><br>Estou à disposição para qualquer dúvida."</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">📸 Instagram DM: Interação em Post</div>
+          <div class="sbt">"Olá! 👋 Vi que você curtiu nossa publicação do [modelo]. Esse relógio ganhou 17 prêmios internacionais de design, incluindo o Grand Prix de Genebra. No site tem frete grátis + 10% OFF no PIX. Posso te contar mais?"</div>
+        </div>
+      </div>
+      
+      <!-- Coluna 2 -->
+      <div class="flex flex-col gap-xs">
+        <div class="sb">
+          <div class="sbc">🔄 Follow-up: Lead Frio (7 a 14 dias)</div>
+          <div class="sbt">"Oi, [Nome]! Há um tempo você se interessou pela CIGA Design. Acabamos de atualizar o estoque com novos modelos. Frete grátis e 10x sem juros no site. Posso te enviar o link com as novidades?"</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">🎁 Gifting Corporativo</div>
+          <div class="sbt">"A CIGA Design é ideal para presentes corporativos premium. Vencedor do Grand Prix de Genebra (Oscar da relojoaria), embalagem luxuosa, frete grátis, nota fiscal e possibilidade de personalização para sua empresa. Posso preparar uma proposta?"</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">⭐ Pedido de Avaliação (D+7)</div>
+          <div class="sbt">"[Nome], esperamos que o [modelo] esteja surpreendendo a cada vez que você olha pro pulso! 🙏 Se puder deixar uma avaliação no Google, nos ajuda muito a alcançar outras pessoas que ainda não conhecem a CIGA. [link]"</div>
+        </div>
+        
+        <div class="sb">
+          <div class="sbc">🔥 Urgência Real: Estoque Baixo</div>
+          <div class="sbt">"[Nome], lembrei de você. O [modelo] que você gostou está com apenas [X] unidades em estoque. É edição limitada e não volta depois que esgota. Se ainda tiver interesse, me avisa que garanto o seu. Frete grátis + 10% no PIX."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SLIDE 16: KPIs E METAS
+     ============================================================ -->
+<section class="slide bg-ink2" id="s16" data-i="16">
+  <div class="acc"></div>
+  <div class="bg-grid"></div>
+  
+  <div class="sc pl-main">
+    <!-- Label -->
+    <span class="lbl rv d1">16: Indicadores e Metas</span>
+    
+    <!-- Título -->
+    <h2 class="rv d2 text-tt font-bold text-ivory mt-xs mb-xs">O Que Medir e Quando Agir</h2>
+    
+    <!-- Tabela de KPIs -->
+    <div class="rv d3">
+      <table class="kpi">
+        <thead>
+          <tr>
+            <th>Indicador</th>
+            <th>Meta</th>
+            <th>Alerta</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tdl">Tempo de 1ª resposta</td>
+            <td class="ok">≤ 5 min</td>
+            <td class="warn">acima de 30 min</td>
+            <td class="tda">Alerta automático (lead esfria rápido)</td>
+          </tr>
+          <tr>
+            <td class="tdl">Taxa de conversão lead → venda</td>
+            <td class="ok">acima de 8%</td>
+            <td class="warn">abaixo de 3%</td>
+            <td class="tda">Revisar qualificação e objeções</td>
+          </tr>
+          <tr>
+            <td class="tdl">Ticket médio</td>
+            <td class="ok">acima de R$3.500</td>
+            <td class="warn">abaixo de R$1.800</td>
+            <td class="tda">Upsell por coleção + ancoragem</td>
+          </tr>
+          <tr>
+            <td class="tdl">NPS (Net Promoter Score)</td>
+            <td class="ok">acima de 75</td>
+            <td class="warn">abaixo de 50</td>
+            <td class="tda">Follow-up imediato com detratores</td>
+          </tr>
+          <tr>
+            <td class="tdl">Taxa de recompra (90 dias)</td>
+            <td class="ok">acima de 15%</td>
+            <td class="warn">abaixo de 5%</td>
+            <td class="tda">Ativar programa de fidelidade</td>
+          </tr>
+          <tr>
+            <td class="tdl">Taxa de bloqueio de pagamento</td>
+            <td class="ok">abaixo de 5%</td>
+            <td class="warn">acima de 15%</td>
+            <td class="tda">Oferecer PIX como primeira opção</td>
+          </tr>
+          <tr>
+            <td class="tdl">Conversão após bloqueio revertido</td>
+            <td class="ok">acima de 70%</td>
+            <td class="warn">abaixo de 40%</td>
+            <td class="tda">Revisar script de reversão</td>
+          </tr>
+          <tr>
+            <td class="tdl">Taxa de PIX vs Cartão</td>
+            <td class="ok">acima de 40% PIX</td>
+            <td class="warn">abaixo de 20% PIX</td>
+            <td class="tda">Reforçar benefício do 10% OFF</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- Callout final -->
+    <div class="callout rv d4 mt-lg">
+      <p><strong>Site oficial para todas as transações:</strong> <span class="text-gold">usecigadesign.com.br</span> Frete grátis, 10x sem juros, 10% OFF no PIX, entrega rápida com rastreamento. Revendedora oficial, produtos com preço final, sem taxas de importação.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     JAVASCRIPT EXTERNO
+     ============================================================ -->
+<script src="javascript.js"></script>
+
+</body>
+</html>
